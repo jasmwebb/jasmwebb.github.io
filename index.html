@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jasmine Webb's portfolio page containing links to her resume, projects, LinkedIn, and GitHub.">
+  <meta name="keywords" content="portfolio, web developer, software developer, junior developer, programmer, professional">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Jasmine Webb Developer</title>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="images/bear2_t.png" alt="doodle of a bear's face" id="logo">
+      <div class="name">Jasmine</div>
+      <div class="name highlight">Web</div>
+      <div class="name">b</div>
+      <div id="line"></div>
+      <h1>Jasmine Webb</h1>
+      <div id="ticker">
+        <span class="ticker-queue on">developer</span>
+        <span class="ticker-queue">autodidact</span>
+        <span class="ticker-queue">teacher</span>
+        <span class="ticker-queue">pokemon trainer</span>
+        <span class="ticker-queue">support main</span>
+        <span class="ticker-queue">minimalist</span>
+        <span class="ticker-queue">animal lover</span>
+        <span class="ticker-queue">environmentalist</span>
+        <span class="ticker-queue">yogi</span>
+      </div>
+    </header>
+
+    <nav>
+      <select id="nav-dropdown" onchange="document.location.href=this.value">
+        <option value="#">Home</option>
+        <option value="#projects">Projects</option>
+        <option value="">Resume</option>
+        <option value="https://www.linkedin.com/in/jasmwebb/">LinkedIn</option>
+        <option value="https://github.com/jasmwebb">GitHub</option>
+      </select>
+
+      <ul id="nav-bar">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/jasmwebb/">LinkedIn</a></li>
+        <li><a href="https://github.com/jasmwebb">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <section id="intro">
+      <p><em>Hey there! I'm Jasmine.</em> I have a background in psychology and teaching, and I'm propelled through life by my unabating enthusiasm for learning and creating fun stuff.</p>
+      <p>I write code because it's the closest thing we have to magic.</p>
+
+      <div id="buttons">
+        <button value="#projects" onclick="document.location.href=this.value">Check Out My Spells</button>
+        <button value="" onclick="document.location.href=this.value">Me, On Paper</button>
+      </div>
+
+      <p id="email">email: <a href="mailto:jmwebb.94+fromportfolio@gmail.com">jmwebb.94@gmail.com</a></p>
+    </section>
+
+    <img src="/images/ghost_bear_t.png" alt="doodle of a cute bear ghost" id="ghost">
+  </main>
+
+  <section id="projects">
+    <h2>Here are some of my projects.</h2>
+    <div class="card">
+      <h3>Project Name</h3>
+      <img src="https://picsum.photos/200" alt="project thumbnail">
+      <p>This is a brief description of my project. It has butts, and we all like butts. You can't lie to me.</p>
+      <div class="card-links">
+        <button value="" onclick="document.location.href=this.value">Demo</button>
+        <button value="" onclick="document.location.href=this.value">Code</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Project Name</h3>
+      <img src="https://picsum.photos/400" alt="project thumbnail">
+      <p>This is a brief description of my project. It has butts, and we all like butts. You can't lie to me.</p>
+      <div class="card-links">
+        <button value="" onclick="document.location.href=this.value">Demo</button>
+        <button value="" onclick="document.location.href=this.value">Code</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Project Name</h3>
+      <img src="https://picsum.photos/800" alt="project thumbnail">
+      <p>This is a brief description of my project. It has butts, and we all like butts. You can't lie to me.</p>
+      <div class="card-links">
+        <button value="" onclick="document.location.href=this.value">Demo</button>
+        <button value="" onclick="document.location.href=this.value">Code</button>
+      </div>
+    </div>
+
+    <p id="to-top" onclick="document.documentElement.scrollTop=0">back to the top</p>
+  </section>
+
+  <footer>
+    <p>Copyright 2019 Jasmine Webb. All rights reserved.</p>
+  </footer>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
