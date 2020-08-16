@@ -1,5 +1,5 @@
 class TypeGreeting {
-  constructor(element, greetings, wait = 8000) {
+  constructor(element, greetings, wait) {
     this.element = element;
     this.greetings = greetings;
     this.partialGreeting = "";
