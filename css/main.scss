@@ -1,412 +1,165 @@
-@import url('https://fonts.googleapis.com/css?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-$color-bg: rgb(180, 180, 209);
-$color-text: rgb(40, 40, 66);
-$color-primary: rgb(175, 105, 240);
-$color-secondary: rgb(245, 196, 0);
-$color-accent: rgb(255, 56, 96);
+$color-bg: rgb(255, 252, 235);
+$color-text: rgb(80, 42, 49);
+$color-primary: rgb(218, 108, 108);
+$color-secondary: rgb(240, 210, 168);
+$color-accent: rgb(162, 173, 118);
 
 @mixin mobile {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1000px) {
     @content;
   }
 }
 
-@mixin bottom-shadow($color, $thickness:4px, $alpha:0.8) {
-  box-shadow: 0 $thickness 0 rgba($color, $alpha);
-}
-
-%white-round {
-  background-color: rgba(255, 255, 255, 0.6);    
-  border-radius: 20px;
-}
-
-%btn-basic {
-  border: none;
-  border-radius: 3px;
-  padding: 0.5rem 0.8rem;
-  font-family: inherit;
-  font-weight: 600;
-  letter-spacing: 0.1ch;
-  text-transform: uppercase;
-  transition: all 0.2s ease-out;
-
-    &:hover {
-      box-shadow: 0 0;
-      transform: translate(0, 2px);
-      cursor: pointer;
-    }
-}
-
 html {
-  background-color: rgba($color-bg, 0.1);
-  font-size: 20px;
+  background-color: $color-bg;
 }
 
 body {
-  font-family: 'ABeeZee', sans-serif;
+  font-family: 'Fira Code', monospace;
   color: $color-text;
-}
-
-main {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  width: 90vw;
-  max-width: 35rem;
-  padding: 0;
-
-  #ghost {
-    display: block;
-    margin: 10vh auto 10vh auto;
-    max-width: 110px;
-  }
+  max-width: 1024px;
 }
 
 header {
-  margin-top: 2vh;
-  display: grid;
-  grid-template-columns: 1fr min-content 0.4em repeat(2, min-content) 1fr;
-  grid-template-rows: 0.5fr 0.5fr 1fr;
-
-  #logo {
-    grid-column: 4;
-    grid-row: 1 / 3;
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-    padding-bottom: 14.5px;
-  }
-
-  h1 {
-    display: none;
-  }
-
-  .name {
-    grid-column: 2;
-    grid-row: 2;
-    font-size: 1.3rem;
-    font-weight: 600;
-    align-self: center;
-
-    &:nth-of-type(2) {
-      grid-column: 4;
-    }
-
-    &:nth-of-type(3) {
-      grid-column: 5;
-    }
-  }
-
-  .highlight {
-    color: $color-primary;
-  }
-
-  #line {
-    background-color: rgba($color-primary, 0.2);
-    @include bottom-shadow($color-primary, 2px, 0.4);
-    grid-column: 2 / 6;
-    grid-row: 2;
-    height: 2px;
-    border-radius: 2px;
-    align-self: end;
-  }
-
-  #ticker {
-    grid-column: 1 / 7;
-    grid-row: 3;
-    padding-top: 0.4rem;
-    justify-self: center;
-    font-size: 1.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05ch;
-    font-weight: 600;
-    color: rgba($color-accent, 0.9);
-  }
-}
-
-// Ticker animation stuff
-.ticker-queue {
-  display: none;
-}
-
-.on {
-  display: inline-block;
-  animation: roll 3900ms;
-}
-
-@keyframes roll {
-  0% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  10% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  40% {
-    transform: perspective(400px);
-  }
-
-  80% {
-    transform: perspective(400px);
-    opacity: 1;
-  }
-
-  90% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -45deg);
-    opacity: 0;
-  }
-
-  100% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -90deg);
-  }
-}
-
-nav {
-  #nav-dropdown {
-    display: none; // Hide dropdown menu navigation on larger screens (default)
-  }
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 0 7vh 0;
 
   @include mobile {
-    #nav-dropdown {
-      display: inline-block; // Show dropdown menu navigation on mobile
-    }
-
-    #nav-bar {
-      display: none; // Hide navigation bar on mobile
-    }
+    padding: 0 1rem;
   }
 
-  margin-top: 3vh;
-  text-align: center;
-
-  select {
-    appearance: none;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 0.7rem;
-    letter-spacing: 0.1ch;
-    text-transform: lowercase;
-    color: rgba($color-accent, 0.7);
-    border-radius: 20px;
-    border: none;
-    padding: 0.25rem 3rem;
-    margin-bottom: 3vh;
-    background-color: rgba(255, 255, 255, 0.6);
-    background-image: url("../images/down.svg");
-    background-repeat: no-repeat;
-    background-size: 4%;
-    background-position: 90%;
-    box-shadow: 0 2px 0 rgba($color-primary, 0.2),
-      0 4px 0 rgba($color-primary, 0.2);  
+  #logo {
+    width: 60px;
   }
 
-  ul {
-    @extend %white-round;
-    margin-top: 4vh;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-
-    li { 
-      a {
-        padding: 0 0.5ch;
-        font-size: 0.75rem;
-        letter-spacing: 0.1ch;
-        text-decoration: none;
-        text-transform: lowercase;
-        color: $color-secondary;
-        transition: all 0.2s ease-out;
-
-        &:hover {
-          color: $color-accent;
-          box-shadow: 0 2px 0 rgba($color-primary, 0.2),
-            0 4px 0 rgba($color-primary, 0.2);          
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      list-style-type: none;
+  
+      li { 
+        a {
+          padding-left: 1.5rem;
+          text-decoration: none;
+          text-transform: lowercase;
+          color: $color-primary;
+          transition: all 0.2s ease-out;
+  
+          &:hover {
+            color: $color-accent;       
+          }
         }
       }
     }
   }
 }
 
-section {
-  &#intro {
-    @extend %white-round;
-    margin: 0;
-    padding: 0.15rem 1rem 1rem 1rem;
-    box-shadow: 0 4px 0 rgba($color-primary, 0.8),
-      0 8px 0 rgba($color-accent, 0.5),
-      0 12px 0 rgba($color-secondary, 0.5);
+.nav-svg {
+  width: 20px;
+  height: 20px;
+  stroke: $color-primary;
+}
+
+.hide-mobile {
+  @include mobile {
+    display: none;
   }
+}
 
-  p {
-    em {
-      font-size: 1.1rem;
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: 0.1ch;
-      color: $color-primary;
-    }
+section {
+  margin-bottom: 10vh;
 
-    &#email {
-      text-align: center;
-      letter-spacing: 0.1ch;
-      font-size: 0.7rem;
-
-      a {
-        color: $color-primary;
-        text-decoration: none;
-        font-weight: 600;
-      }
-    }
+  &#intro {
+    max-width: 632px;
+    align-self: center;
+    padding: 0 1rem;
   }
 
   &#projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
+    justify-content: space-between;
+    font-size: 0.9rem;
 
-    h2 {
-      margin: 0;
-      text-align: center;
-      flex-basis: 100%;
-      font-size: 1.25rem;
+    @include mobile {
+      justify-content: space-evenly;
     }
 
     #to-top {
       text-align: center;
       flex-basis: 100%;
-      letter-spacing: 0.1ch;
+      color: $color-primary;
 
       &:hover {
         cursor: pointer;
+        color: $color-accent;
       }
     }
 
     .card {
-      @extend %white-round;
-      @include bottom-shadow($color-primary);
-      padding: 0 1rem 1.5rem 1rem;
-      margin: 0.5rem 0.5rem;
-      width: 80vw;
-      max-width: 300px;
+      max-width: 320px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      margin-bottom: 3rem;
 
       img {
-        max-width: 200px;
-        border-radius: 50%;
+        max-width: 100%;
       }
 
       h3 {
         color: $color-primary;
-        letter-spacing: 0.1ch;
         font-size: 1rem;
-      }
-
-      button {
-        @extend %btn-basic;
-        background-color: rgba($color-primary, 0.2);
-        color: rgba($color-primary, 0.7);
-        @include bottom-shadow($color-primary, 2px, 0.4);
-
-          &:hover {
-            background-color: rgba($color-primary, 0.22);
-          }
-      }
-
-      &:nth-of-type(2n) {
-        @include bottom-shadow($color-accent);
-
-        h3 {
-          color: $color-accent;
-        }
-         
-        button {
-          @extend %btn-basic;
-          background-color: rgba($color-accent, 0.2);
-          color: rgba($color-accent, 0.7);
-          @include bottom-shadow($color-accent, 2px, 0.4);
-  
-          &:hover {
-            background-color: rgba($color-accent, 0.22);
-            box-shadow: 0 0;
-          }
-        }
-      }
-
-      &:nth-of-type(3n) {
-        @include bottom-shadow($color-secondary);
-
-        h3 {
-          color: $color-secondary;
-        }
-
-        button {
-          @extend %btn-basic;
-          background-color: rgba($color-secondary, 0.1);
-          color: $color-secondary;
-          @include bottom-shadow($color-secondary, 2px, 0.4);
-  
-          &:hover {
-            background-color: rgba($color-secondary, 0.12);
-            box-shadow: 0 0;
-          }
-        }
+        margin-top: 1rem;
+        margin-bottom: 0;
       }
     }
   }
 }
 
-#buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#top-line {
+  font-size: 1.5rem;
+}
 
-  button {
-    @extend %btn-basic;
-    width: 45%;
-    font-size: 0.75rem;
-    background-color: rgba($color-primary, 0.2);
-    color: rgba($color-primary, 0.7);
-    margin-bottom: 0.5rem;
-    @include bottom-shadow($color-primary, 2px, 0.4);
+.highlight {
+  color: $color-primary;
+}
 
-    &:hover {
-      background-color: rgba($color-primary, 0.22);
-    }
-  
-    &:nth-child(2) {
-      margin-left: 0.25rem;
-      width: 35%;
-      font-weight: 400;
-      background-color: rgba($color-secondary, 0.1);
-      color: $color-secondary;
-      @include bottom-shadow($color-secondary, 2px, 0.4);
+.highlight2 {
+  color: $color-accent;
+}
 
-      &:hover {
-        @extend %btn-basic:hover;
-        background-color: rgba($color-secondary, 0.12);
-      }
-    }
-  }
+a {
+  color: $color-primary;
+  text-decoration: none;
+  text-transform: lowercase;
 
-  @include mobile {
-    flex-direction: column;
-    
-    button, button:nth-child(2) {
-      width: 90%;
-    }
+  &:hover {
+    cursor: pointer;
+    color: $color-accent;
   }
 }
 
 footer {
-  margin-top: 30vh;
   text-align: center;
-  font-size: 0.7rem;
+
+  #bear {
+    max-width: 110px;
+  }
+
+  #email {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  #footer-icons {
+    margin-top: 1rem;
+  }
 }
