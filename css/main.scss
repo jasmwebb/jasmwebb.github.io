@@ -4,12 +4,28 @@ $color-bg: rgb(255, 252, 235);
 $color-text: rgb(80, 42, 49);
 $color-primary: rgb(218, 108, 108);
 $color-secondary: rgb(240, 210, 168);
-$color-accent: rgb(162, 173, 118);
+$color-accent: rgb(100, 162, 131);
 
 @mixin mobile {
   @media screen and (max-width: 1000px) {
     @content;
   }
+}
+
+%hover-transition {
+  color: $color-primary;
+  transition: all 0.4s ease-out;
+
+  &:hover {
+    color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+%backed-text {
+  background: rgba($color-primary, 0.1);
+  border-radius: 4px;
+  color: $color-primary;
 }
 
 html {
@@ -23,6 +39,12 @@ body {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1024px;
+}
+
+a {
+  @extend %hover-transition;
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
 header {
@@ -48,14 +70,6 @@ header {
       li { 
         a {
           padding-left: 1.5rem;
-          text-decoration: none;
-          text-transform: lowercase;
-          color: $color-primary;
-          transition: all 0.2s ease-out;
-  
-          &:hover {
-            color: $color-accent;       
-          }
         }
       }
     }
@@ -94,14 +108,9 @@ section {
     }
 
     #to-top {
+      @extend %hover-transition;
       text-align: center;
       flex-basis: 100%;
-      color: $color-primary;
-
-      &:hover {
-        cursor: pointer;
-        color: $color-accent;
-      }
     }
 
     .card {
@@ -126,6 +135,12 @@ section {
 
 #top-line {
   font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.type-greeting {
+  @extend %backed-text;
+  padding: 0.25rem 0.5rem ;
 }
 
 .highlight {
@@ -136,17 +151,6 @@ section {
   color: $color-accent;
 }
 
-a {
-  color: $color-primary;
-  text-decoration: none;
-  text-transform: lowercase;
-
-  &:hover {
-    cursor: pointer;
-    color: $color-accent;
-  }
-}
-
 footer {
   text-align: center;
 
@@ -155,11 +159,17 @@ footer {
   }
 
   #email {
-    color: $color-primary;
+    @extend %hover-transition;
+    @extend %backed-text;
     text-decoration: none;
+    padding: 0.5rem 3.5rem;
+
+    &:hover {
+      background: rgba($color-accent, 0.1);
+    }
   }
 
   #footer-icons {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
   }
 }
