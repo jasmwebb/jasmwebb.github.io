@@ -89,7 +89,7 @@ header {
 }
 
 section {
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
 
   &#intro {
     max-width: 632px;
@@ -105,6 +105,13 @@ section {
 
     @include mobile {
       justify-content: space-evenly;
+    }
+
+    & > h2 {
+      flex: 0 0 100%;
+      text-align: center;
+      font-weight: normal;
+      font-size: 1rem;
     }
 
     #to-top {
@@ -171,5 +178,6 @@ footer {
 
   #footer-icons {
     margin-top: 1.25rem;
+    margin-bottom: 1rem;
   }
 }

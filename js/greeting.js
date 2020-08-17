@@ -1,4 +1,4 @@
-class TypeGreeting {
+export default class TypeGreeting {
   constructor(element, greetings, wait) {
     this.element = element;
     this.greetings = greetings;
@@ -41,14 +41,4 @@ class TypeGreeting {
   
     setTimeout(() => this.type(), typeSpeed);
   }
-}
-
-document.addEventListener("DOMContentLoaded", init);
-
-function init() {
-  const element = document.getElementsByClassName("type-greeting")[0];
-  const greetings = JSON.parse(element.getAttribute("data-greetings"));
-  const wait = element.getAttribute("data-wait");
-
-  new TypeGreeting(element, greetings, wait);
 }
