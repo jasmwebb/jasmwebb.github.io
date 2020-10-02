@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", init);
 
 function init() {
   // Typed Greeting Animation
-  const element = document.getElementsByClassName("type-greeting")[0];
+  const element = document.getElementById("type-greeting");
   const greetings = JSON.parse(element.getAttribute("data-greetings"));
   const wait = element.getAttribute("data-wait");
 

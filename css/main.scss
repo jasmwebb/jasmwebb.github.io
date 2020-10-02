@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-$color-bg: rgb(255, 252, 235);
-$color-text: rgb(80, 42, 49);
-$color-primary: rgb(218, 108, 108);
-$color-secondary: rgb(240, 210, 168);
-$color-accent: rgb(100, 162, 131);
+$color-bg: #ffffff;
+$color-text: #342467;
+$color-primary: #7aa0e1;
+$color-accent: #6bd0b5;
 
 @mixin mobile {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin responsive-greeting {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
@@ -23,7 +28,7 @@ $color-accent: rgb(100, 162, 131);
 }
 
 %backed-text {
-  background: rgba($color-primary, 0.1);
+  background: rgba($color-primary, 0.08);
   border-radius: 4px;
   color: $color-primary;
 }
@@ -70,6 +75,10 @@ header {
       li { 
         a {
           padding-left: 1.5rem;
+
+          @include mobile {
+            padding-left: 1rem;
+          }
         }
       }
     }
@@ -145,9 +154,15 @@ section {
   line-height: 1.75rem;
 }
 
-.type-greeting {
+#type-greeting {
   @extend %backed-text;
   padding: 0.25rem 0.5rem ;
+
+  @include responsive-greeting() {
+    display: block;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 0;
+  }
 }
 
 .highlight {
