@@ -109,10 +109,12 @@ section {
   &#projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap:  3rem;
     font-size: 0.9rem;
 
     @include mobile {
       grid-template-columns: 1fr;
+      grid-gap: 0;
       justify-items: center;
     }
 
