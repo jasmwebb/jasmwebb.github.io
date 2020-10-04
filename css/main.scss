@@ -6,13 +6,13 @@ $color-primary: #7aa0e1;
 $color-accent: #6bd0b5;
 
 @mixin mobile {
-  @media screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     @content;
   }
 }
 
 @mixin responsive-greeting {
-  @media screen and (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     @content;
   }
 }
@@ -107,26 +107,34 @@ section {
   }
 
   &#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     font-size: 0.9rem;
 
     @include mobile {
-      justify-content: space-evenly;
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
 
     & > h2 {
-      flex: 0 0 100%;
+      grid-column: span 3;
       text-align: center;
       font-weight: normal;
       font-size: 1rem;
+
+      @include mobile {
+        grid-column: auto;
+      }
     }
 
     #to-top {
       @extend %hover-transition;
+      grid-column: span 3;
       text-align: center;
-      flex-basis: 100%;
+
+      @include mobile {
+        grid-column: auto;
+      }
     }
 
     .card {
