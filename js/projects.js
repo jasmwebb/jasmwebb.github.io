@@ -9,7 +9,7 @@ const projectsObjs = [
     ],
     demo: "https://countingrows.netlify.app/",
     source: "https://github.com/jasmwebb/counting-rows",
-    thumbnail: "/images/thumbs/countingrowsthumb.png"
+    thumbnail: "/static/thumbs/countingrowsthumb.png"
   },
   {
     name: "K-STAN (code name)",
@@ -21,17 +21,17 @@ const projectsObjs = [
     ],
     demo: "https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1",
     source: null,
-    thumbnail: "/images/thumbs/kstanframes.png"
+    thumbnail: "/static/thumbs/kstanframes.png"
   },
   {
-    name: "Kumho Compiler",
+    name: "Kumho (금호) Compiler",
     description: [
       "A <em class='highlight2'>command-line interface</em> written in <em class='highlight2'>Python</em> for a friend’s business. It automates the process of combing through a large volume of files for data and synthesizing that data into Microsoft Excel tables and graphs.",
       "<em class='highlight'>Note:</em> The above thumbnail shows all the prompts and processes, however, since a data set is not specified in prompt #2, that particular execution did nothing."
     ],
     demo: null,
     source: "https://github.com/jasmwebb/kumho-compiler",
-    thumbnail: "/images/thumbs/kumhocompilerthumb.png"
+    thumbnail: "/static/thumbs/kumhocompilerthumb.png"
   },
   {
     name: "Kamatimer",
@@ -40,7 +40,7 @@ const projectsObjs = [
     ],
     demo: "https://jasmwebb.github.io/kamatimer/",
     source: "https://github.com/jasmwebb/kamatimer",
-    thumbnail: "/images/thumbs/kamatimerthumb.png"
+    thumbnail: "/static/thumbs/kamatimerthumb.png"
   },
   {
     name: "Portfolio",
@@ -50,7 +50,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/jasmwebbdev",
-    thumbnail: "/images/ghost_bear_t.png"
+    thumbnail: "/static/ghost_bear_t.png"
   }
 ];
 
