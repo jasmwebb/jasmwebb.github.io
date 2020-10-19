@@ -9,7 +9,12 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/mailming",
-    thumbnail: "/static/thumbs/mailmingthumb.gif"
+    thumbnail: "/static/thumbs/mailmingthumb.gif",
+    tags: [
+      "Static Site Generator",
+      "Sass",
+      "JAMstack"
+    ]
   },
   {
     name: "Counting Rows",
@@ -21,7 +26,12 @@ const projectsObjs = [
     ],
     demo: "https://countingrows.netlify.app/",
     source: "https://github.com/jasmwebb/counting-rows",
-    thumbnail: "/static/thumbs/countingrowsthumb.png"
+    thumbnail: "/static/thumbs/countingrowsthumb.png",
+    tags: [
+      "Svelte",
+      "TailwindCSS",
+      "JAMstack"
+    ]
   },
   {
     name: "K-STAN (code name)",
@@ -33,7 +43,11 @@ const projectsObjs = [
     ],
     demo: "https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1",
     source: null,
-    thumbnail: "/static/thumbs/kstanframes.png"
+    thumbnail: "/static/thumbs/kstanframes.png",
+    tags: [
+      "Figma",
+      "JAMstack"
+    ]
   },
   {
     name: "Kumho (금호) Compiler",
@@ -43,26 +57,41 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/kumho-compiler",
-    thumbnail: "/static/thumbs/kumhocompilerthumb.png"
+    thumbnail: "/static/thumbs/kumhocompilerthumb.png",
+    tags: [
+      "Python"
+    ]
   },
   {
     name: "Kamatimer",
     description: [
-      "Just a pomodoro timer written in vanilla <em class=\"highlight2\">JavaScript</em>, <em class=\"highlight2\">HTML5</em>, and <em class=\"highlight2\">SCSS</em>."
+      "Just a pomodoro timer written in vanilla <em class=\"highlight2\">JavaScript</em>, <em class=\"highlight2\">HTML</em>, and <em class=\"highlight2\">Sass</em>."
     ],
     demo: "https://jasmwebb.github.io/kamatimer/",
     source: "https://github.com/jasmwebb/kamatimer",
-    thumbnail: "/static/thumbs/kamatimerthumb.png"
+    thumbnail: "/static/thumbs/kamatimerthumb.png",
+    tags: [
+      "Vanilla JavaScript",
+      "HTML",
+      "Sass",
+      "JAMstack"
+    ]
   },
   {
     name: "Portfolio",
     description: [
-      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em>, <em class=\"highlight2\">HTML5</em>, and <em class=\"highlight2\">SCSS</em>. The project section is even programmatically <em class=\"highlight2\">generated from JSON</em>!",
+      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em>, <em class=\"highlight2\">HTML</em>, and <em class=\"highlight2\">Sass</em>. The project section is even programmatically <em class=\"highlight2\">generated from JSON</em>!",
       "The bear graphics were also drawn by me."
     ],
     demo: null,
     source: "https://github.com/jasmwebb/jasmwebbdev",
-    thumbnail: "/static/ghost_bear_t.png"
+    thumbnail: "/static/ghost_bear_t.png",
+    tags: [
+      "Vanilla JavaScript",
+      "HTML",
+      "Sass",
+      "JAMstack"
+    ]
   }
 ];
 

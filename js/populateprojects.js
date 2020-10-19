@@ -16,8 +16,9 @@ export default class PopulateProjects {
   generateProjects() {
     this.projects.forEach(project => {
       // Create new project card
-      const newCard = document.createElement("div");
+      const newCard = document.createElement("article");
       newCard.setAttribute("class", "card");
+      newCard.setAttribute("data-tags", project.tags.join(" ").toLowerCase());
 
       // Set image and name
       newCard.innerHTML = `
