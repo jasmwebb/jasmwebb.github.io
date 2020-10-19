@@ -11,7 +11,7 @@ const projectsObjs = [
     source: "https://github.com/jasmwebb/mailming",
     thumbnail: "/static/thumbs/mailmingthumb.gif",
     tags: [
-      "Static Site Generator",
+      "Eleventy",
       "Sass",
       "JAMstack"
     ]
@@ -71,7 +71,7 @@ const projectsObjs = [
     source: "https://github.com/jasmwebb/kamatimer",
     thumbnail: "/static/thumbs/kamatimerthumb.png",
     tags: [
-      "Vanilla JavaScript",
+      "JavaScript",
       "Sass",
       "JAMstack"
     ]
@@ -86,7 +86,7 @@ const projectsObjs = [
     source: "https://github.com/jasmwebb/jasmwebbdev",
     thumbnail: "/static/ghost_bear_t.png",
     tags: [
-      "Vanilla JavaScript",
+      "JavaScript",
       "Sass",
       "JAMstack"
     ]

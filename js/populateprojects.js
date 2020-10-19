@@ -23,6 +23,7 @@ export default class PopulateProjects {
     const filterOptions = document.createElement("div");
     let combinedTags = this.projects.reduce((accArr, curArr) => accArr.concat(curArr.tags), []);
     combinedTags.sort();
+    combinedTags.unshift("View All");
     combinedTags = new Set(combinedTags);
     combinedTags.forEach(tag => filterOptions.innerHTML += `<button>${tag}</button>`);
     header.appendChild(filterOptions);
