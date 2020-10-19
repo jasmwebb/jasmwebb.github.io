@@ -8,8 +8,25 @@ export default class PopulateProjects {
   }
 
   setHeader() {
-    const header = document.createElement("h2")
-    header.textContent = "Projects";
+    const header = document.createElement("header");
+
+    // Section titles
+    const title = document.createElement("h2");
+    title.textContent = "Projects";
+    header.appendChild(title);
+
+    const subtitle = document.createElement("p");
+    subtitle.textContent = "Filter By Tech";
+    header.appendChild(subtitle);
+
+    // Filter option buttons   
+    const filterOptions = document.createElement("div");
+    let combinedTags = this.projects.reduce((accArr, curArr) => accArr.concat(curArr.tags), []);
+    combinedTags.sort();
+    combinedTags = new Set(combinedTags);
+    combinedTags.forEach(tag => filterOptions.innerHTML += `<button>${tag}</button>`);
+    header.appendChild(filterOptions);
+
     this.element.appendChild(header);
   }
 
@@ -27,9 +44,7 @@ export default class PopulateProjects {
       `;
 
       // Set description with proper formatting
-      project.description.forEach(paragraph => {
-        newCard.innerHTML += `<p>${paragraph}</p>`
-      });
+      project.description.forEach(paragraph => newCard.innerHTML += `<p>${paragraph}</p>`);
 
       // Set links
       let links = "";

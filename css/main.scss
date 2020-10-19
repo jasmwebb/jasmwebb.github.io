@@ -109,23 +109,50 @@ section {
   &#projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:  3rem;
+    grid-column-gap: 3rem;
     font-size: 0.9rem;
 
     @include mobile {
       grid-template-columns: 1fr;
-      grid-gap: 0;
       justify-items: center;
     }
 
-    & > h2 {
+    & > header {
       grid-column: span 3;
       text-align: center;
-      font-weight: normal;
-      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
 
       @include mobile {
         grid-column: auto;
+        margin-bottom: 1.75rem;
+      }
+
+      & > h2 {
+        font-weight: normal;
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+
+      & > p {
+        text-transform: lowercase;
+        font-style: italic;
+        font-size: 0.8rem;
+        color: $color-accent;
+        margin-top: 0.15rem;
+      }
+
+      & > div button {
+        @extend %backed-text;
+        border: none;
+        font-family: inherit;
+        font-size: 0.8rem;
+        margin: 0 0.45rem;
+        padding: 0.25rem;
+
+        @include mobile {
+          margin-bottom: 0.5rem;
+        }
       }
     }
 
@@ -143,7 +170,7 @@ section {
       max-width: 320px;
       display: flex;
       flex-direction: column;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
 
       img {
         max-width: 100%;
