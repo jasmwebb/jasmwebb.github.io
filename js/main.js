@@ -22,6 +22,7 @@ function init() {
   const filterBy = e => {
     const selectedTag = e.target.innerText;
 
+    // Remove hidden class from any cards that have it
     try {
       projectCards.forEach(card => card.classList.remove("hidden"));
     } catch (error) {}
