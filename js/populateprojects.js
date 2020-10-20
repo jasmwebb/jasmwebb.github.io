@@ -36,7 +36,7 @@ export default class PopulateProjects {
       // Create new project card
       const newCard = document.createElement("article");
       newCard.setAttribute("class", "card");
-      newCard.setAttribute("data-tags", project.tags.join(" ").toLowerCase());
+      newCard.setAttribute("data-tags", project.tags);
 
       // Set image and name
       newCard.innerHTML = `

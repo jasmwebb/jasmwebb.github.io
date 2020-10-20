@@ -181,7 +181,7 @@ section#projects #to-top {
   }
 }
 
-section#projects .card {
+section#projects article.card {
   max-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,15 +193,19 @@ section#projects .card {
   margin-bottom: 3.5rem;
 }
 
-section#projects .card img {
+section#projects article.card img {
   max-width: 100%;
 }
 
-section#projects .card h3 {
+section#projects article.card h3 {
   color: #7aa0e1;
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+section#projects article.hidden {
+  display: none;
 }
 
 .no-link {
