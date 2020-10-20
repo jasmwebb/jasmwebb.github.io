@@ -170,6 +170,10 @@ section#projects > header > div button {
   }
 }
 
+section#projects > header > div button:hover {
+  cursor: pointer;
+}
+
 section#projects #to-top {
   grid-column: span 3;
   text-align: center;
