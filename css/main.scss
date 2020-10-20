@@ -98,8 +98,6 @@ header {
 }
 
 section {
-  margin-bottom: 6vh;
-
   &#intro {
     max-width: 632px;
     align-self: center;
@@ -111,6 +109,7 @@ section {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 3rem;
     font-size: 0.9rem;
+    margin-bottom: 6vh;
 
     @include mobile {
       grid-template-columns: 1fr;
@@ -122,6 +121,7 @@ section {
       text-align: center;
       display: flex;
       flex-direction: column;
+      margin-bottom: 2.5rem;
 
       @include mobile {
         grid-column: auto;
