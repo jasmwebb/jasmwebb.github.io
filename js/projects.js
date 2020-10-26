@@ -1,5 +1,19 @@
 const projectsObjs = [
   {
+    name: "Herowatch Scraper",
+    description: [
+      "Grabs hero data from the Overwatch wiki to supply my Overwatch hero API.",
+      "More specifically, it grabs basic hero information — such as name, nationality, and role — along with abilities and their accompanying stats.",
+      "Demo link leads to the generated JSON file; best viewed with a JSON formatting browser extension installed."
+    ],
+    demo: "https://raw.githubusercontent.com/jasmwebb/herowatch-scraper/main/heroes.json",
+    source: "https://github.com/jasmwebb/herowatch-scraper",
+    thumbnail: "/static/thumbs/herowatchthumb.png",
+    tags: [
+      "Python"
+    ]
+  },
+  {
     name: "Mailming",
     description: [
       "This is a \"private\" blog made to emulate snail mail between two people with a vague 00s aesthetic.",
