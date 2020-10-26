@@ -2,7 +2,7 @@ const projectsObjs = [
   {
     name: "Herowatch Scraper",
     description: [
-      "Grabs hero data (basic hero information — such as name, nationality, and role — along with abilities and their accompanying stats) from the Overwatch wiki to supply my Overwatch hero API.",
+      "Grabs hero data (basic hero information — such as name, nationality, and role — along with abilities and their accompanying stats) from the Overwatch wiki, then sanitizes via several <em class=\"highlight2\">regular expressions</em> before writing to a single JSON file that supplies my Overwatch hero API.",
       "Written in <em class=\"highlight2\">Python</em> and manually run from the command line.",
       "Demo link leads to the generated JSON file; best viewed with a JSON formatting browser extension installed."
     ],
