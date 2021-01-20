@@ -44,9 +44,6 @@ export default class PopulateProjects {
         <h3>${project.name}</h3>
       `;
 
-      // Set description with proper formatting
-      project.description.forEach(paragraph => newCard.innerHTML += `<p>${paragraph}</p>`);
-
       // Set links
       let links = "";
 
@@ -62,7 +59,10 @@ export default class PopulateProjects {
         links += `<span class="no-link">source</span>`;
       }
       
-      newCard.innerHTML += `<div>[ ${links} ]</div>`;
+      newCard.innerHTML += `<div>${links}</div>`;
+
+      // Set description with proper formatting
+      project.description.forEach(paragraph => newCard.innerHTML += `<p>${paragraph}</p>`);
 
       // Add to DOM
       this.element.appendChild(newCard);

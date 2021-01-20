@@ -1,8 +1,22 @@
 const projectsObjs = [
   {
+    name: "Advent of Code 2020",
+    description: [
+      "My first year participating in Advent of Code. All of my solutions were written in <em class=\"highlight2\">Python</em>.",
+      "This was a fun challenge in problem solving, utilizing appropriate data structures, and implementing test suites (although I didn't think to do that until the last few days).",
+      "The stars for part 2 of days 20 and 23 still evade me, and I began to fall behind starting from day 9, but I look forward to saving Christmas all over again next year."
+    ],
+    demo: null,
+    source: "https://github.com/jasmwebb/advent-of-code",
+    thumbnail: "/static/thumbs/aoc2020.png",
+    tags: [
+      "Python"
+    ]
+  },
+  {
     name: "Herowatch Scraper",
     description: [
-      "Grabs hero data (basic hero information — such as name, nationality, and role — along with abilities and their accompanying stats) from the Overwatch wiki, then sanitizes via several <em class=\"highlight2\">regular expressions</em> before writing to a single JSON file that supplies my Overwatch hero API.",
+      "Grabs the heroes' data from the Overwatch wiki, then writes it all to a single JSON file. This was mainly an exercise in <em class=\"highlight2\">regular expressions</em>.",
       "Written in <em class=\"highlight2\">Python</em> and manually run from the command line.",
       "Demo link leads to the generated JSON file; best viewed with a JSON formatting browser extension installed."
     ],
@@ -66,8 +80,8 @@ const projectsObjs = [
   {
     name: "Kumho (금호) Compiler",
     description: [
-      "A <em class=\"highlight2\">command-line interface</em> written in <em class=\"highlight2\">Python</em> for a friend’s business. It automates the process of combing through a large volume of files for data and synthesizing that data into Microsoft Excel tables and graphs.",
-      "<em class='highlight'>Note:</em> The above thumbnail shows all the prompts and processes, however, since a data set is not specified in prompt #2, that particular execution did nothing."
+      "Prototype enterprise software written in <em class=\"highlight2\">Python</em> for a friend’s business. It automates the process of combing through a large volume of files for data and synthesizing that data into Microsoft Excel tables and graphs.",
+      "<em class='highlight'>Note:</em> The above thumbnail shows all the prompts and processes, however, since a data set is not specified in prompt #2, this particular execution did nothing."
     ],
     demo: null,
     source: "https://github.com/jasmwebb/kumho-compiler",
@@ -93,8 +107,7 @@ const projectsObjs = [
   {
     name: "Portfolio",
     description: [
-      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em> and <em class=\"highlight2\">Sass</em>. The project section is even programmatically <em class=\"highlight2\">generated from JSON</em>!",
-      "The bear graphics were also drawn by me."
+      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em> and <em class=\"highlight2\">Sass</em>. The project section is even programmatically <em class=\"highlight2\">generated from JSON</em>!"
     ],
     demo: null,
     source: "https://github.com/jasmwebb/jasmwebbdev",
