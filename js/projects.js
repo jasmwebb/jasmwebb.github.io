@@ -3,8 +3,8 @@ const projectsObjs = [
     name: "Advent of Code 2020",
     description: [
       "My first year participating in Advent of Code; all of my solutions were written in <em class=\"highlight2\">Python</em>.",
-      "This was a fun challenge in problem solving, utilizing appropriate data structures, and implementing test suites (although I didn't think to do that until the last few days).",
-      "The stars for part 2 of days 20 and 23 still evade me, and I began to fall behind starting from day 9, but I look forward to saving Christmas all over again next year."
+      "This was a fun challenge in problem solving, utilizing appropriate data structures, implementing test suites (although I didn't think to do that until the last few days), and catching up. Lots of catching up.",
+      "I look forward to saving Christmas all over again next year."
     ],
     demo: null,
     source: "https://github.com/jasmwebb/advent-of-code",
