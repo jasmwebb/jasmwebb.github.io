@@ -8,7 +8,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/advent-of-code",
-    thumbnail: "/static/thumbs/aoc2020.png",
+    thumbnail: "/assets/thumbs/aoc2020.png",
     tags: [
       "Python"
     ]
@@ -22,7 +22,7 @@ const projectsObjs = [
     ],
     demo: "https://raw.githubusercontent.com/jasmwebb/herowatch-scraper/main/heroes.json",
     source: "https://github.com/jasmwebb/herowatch-scraper",
-    thumbnail: "/static/thumbs/herowatchthumb.png",
+    thumbnail: "/assets/thumbs/herowatchthumb.png",
     tags: [
       "Python"
     ]
@@ -36,7 +36,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/mailming",
-    thumbnail: "/static/thumbs/mailmingthumb.gif",
+    thumbnail: "/assets/thumbs/mailmingthumb.gif",
     tags: [
       "Eleventy",
       "Sass",
@@ -53,7 +53,7 @@ const projectsObjs = [
     ],
     demo: "https://countingrows.netlify.app/",
     source: "https://github.com/jasmwebb/counting-rows",
-    thumbnail: "/static/thumbs/countingrowsthumb.png",
+    thumbnail: "/assets/thumbs/countingrowsthumb.png",
     tags: [
       "Svelte",
       "TailwindCSS",
@@ -69,7 +69,7 @@ const projectsObjs = [
     ],
     demo: "https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1",
     source: null,
-    thumbnail: "/static/thumbs/kstanframes.png",
+    thumbnail: "/assets/thumbs/kstanframes.png",
     tags: [
       "Figma",
       "JAMstack"
@@ -83,7 +83,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/kumho-compiler",
-    thumbnail: "/static/thumbs/kumhocompilerthumb.png",
+    thumbnail: "/assets/thumbs/kumhocompilerthumb.png",
     tags: [
       "Python"
     ]
@@ -95,7 +95,7 @@ const projectsObjs = [
     ],
     demo: "https://jasmwebb.github.io/kamatimer/",
     source: "https://github.com/jasmwebb/kamatimer",
-    thumbnail: "/static/thumbs/kamatimerthumb.png",
+    thumbnail: "/assets/thumbs/kamatimerthumb.png",
     tags: [
       "JavaScript",
       "Sass",
@@ -105,11 +105,11 @@ const projectsObjs = [
   {
     name: "Portfolio",
     description: [
-      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em> and <em class=\"highlight2\">Sass</em>. The project section is even programmatically <em class=\"highlight2\">generated from JSON</em>!"
+      "This very portfolio was made with <em class=\"highlight2\" style='font-style: normal;'>♡</em> with vanilla <em class=\"highlight2\">JavaScript</em> and <em class=\"highlight2\">Sass</em>."
     ],
     demo: null,
     source: "https://github.com/jasmwebb/jasmwebbdev",
-    thumbnail: "/static/ghost_bear_t.png",
+    thumbnail: "/assets/ghost_bear_t.png",
     tags: [
       "JavaScript",
       "Sass",
