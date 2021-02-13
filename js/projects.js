@@ -1,5 +1,21 @@
 const projectsObjs = [
   {
+    name: "Apply Guy",
+    description: [
+      "<em class=\"highlight2\">Friendship ended with spreadsheets. Now Apply Guy is my best friend.</em>",
+      "I wanted a way to keep track of my and my partner's job hunt progress that wasn't just a boring spreadsheet, so this <em class=\"highlight2\">CRUD</em> application was born.",
+      "Frontend built with <em class=\"highlight2\">Svelte</em>; backend (authentication and database) served by <em class=\"highlight2\">Firebase</em>."
+    ],
+    demo: "https://apply-guy.netlify.app/",
+    source: "https://github.com/jasmwebb/apply-guy",
+    thumbnail: "/assets/thumbs/applyguythumb.png",
+    tags: [
+      "Svelte",
+      "Firebase",
+      "JAMstack"
+    ]
+  },
+  {
     name: "Advent of Code 2020",
     description: [
       "My first year participating in Advent of Code; all of my solutions were written in <em class=\"highlight2\">Python</em>.",
@@ -8,7 +24,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/advent-of-code",
-    thumbnail: "/assets/thumbs/aoc2020.png",
+    thumbnail: "/assets/thumbs/aoc2020thumb.png",
     tags: [
       "Python"
     ]
