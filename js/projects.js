@@ -125,7 +125,7 @@ const projectsObjs = [
     ],
     demo: null,
     source: "https://github.com/jasmwebb/jasmwebbdev",
-    thumbnail: "/assets/ghost_bear_t.png",
+    thumbnail: "/assets/thumbs/jasminethumb.png",
     tags: [
       "JavaScript",
       "Sass",

@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
-a, section#projects #to-top, footer #email {
+footer #email, section#projects #to-top, a {
   color: #7aa0e1;
-  -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-
-a:hover, section#projects #to-top:hover, footer #email:hover {
+footer #email:hover, section#projects #to-top:hover, a:hover {
   color: #6bd0b5;
   cursor: pointer;
 }
 
-section#projects > header > div button, #type-greeting, footer #email {
+footer #email, #type-greeting, section#projects > header > div button {
   background: rgba(122, 160, 225, 0.08);
   border-radius: 4px;
   color: #7aa0e1;
@@ -21,15 +19,10 @@ html {
 }
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   color: #342467;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1024px;
 }
@@ -40,42 +33,24 @@ a {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 3vh 0 7vh 0;
 }
-
 @media only screen and (max-width: 1023px) {
   header {
     padding: 0 1rem;
   }
 }
-
-header #logo {
-  width: 60px;
-}
-
 header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: space-evenly;
+  align-items: flex-end;
   list-style-type: none;
 }
-
 header nav ul li a {
   padding-left: 1.5rem;
 }
-
 @media only screen and (max-width: 1023px) {
   header nav ul li a {
     padding-left: 1rem;
@@ -96,56 +71,40 @@ header nav ul li a {
 
 section#intro {
   max-width: 632px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   padding: 0 1rem;
 }
-
 section#projects {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
   font-size: 0.9rem;
   margin-bottom: 6vh;
 }
-
 @media only screen and (max-width: 1023px) {
   section#projects {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
 }
-
 section#projects > header {
   grid-column: span 3;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 2.5rem;
 }
-
 @media only screen and (max-width: 1023px) {
   section#projects > header {
     grid-column: auto;
     margin-bottom: 1.75rem;
   }
 }
-
 section#projects > header > h2 {
   font-weight: normal;
   font-size: 1rem;
   margin-bottom: 0;
 }
-
 section#projects > header > p {
   text-transform: lowercase;
   font-style: italic;
@@ -153,7 +112,6 @@ section#projects > header > p {
   color: #6bd0b5;
   margin-top: 0.15rem;
 }
-
 section#projects > header > div button {
   border: none;
   font-family: inherit;
@@ -161,51 +119,38 @@ section#projects > header > div button {
   margin: 0 0.45rem;
   padding: 0.25rem;
 }
-
 @media only screen and (max-width: 1023px) {
   section#projects > header > div button {
     margin-bottom: 0.5rem;
   }
 }
-
 section#projects > header > div button:hover {
   cursor: pointer;
 }
-
 section#projects #to-top {
   grid-column: span 3;
   text-align: center;
 }
-
 @media only screen and (max-width: 1023px) {
   section#projects #to-top {
     grid-column: auto;
   }
 }
-
 section#projects article.card {
   max-width: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 3.5rem;
 }
-
 section#projects article.card img {
   max-width: 100%;
 }
-
 section#projects article.card h3 {
   color: #7aa0e1;
   font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 0;
 }
-
 section#projects article.hidden {
   display: none;
 }
@@ -222,7 +167,6 @@ section#projects article.hidden {
 #type-greeting {
   padding: 0.25rem 0.5rem;
 }
-
 @media only screen and (max-width: 767px) {
   #type-greeting {
     display: block;
@@ -242,21 +186,19 @@ section#projects article.hidden {
 footer {
   text-align: center;
 }
-
 footer #bear {
   max-width: 110px;
 }
-
 footer #email {
   text-decoration: none;
   padding: 0.5rem 3.5rem;
 }
-
 footer #email:hover {
   background: rgba(107, 208, 181, 0.1);
 }
-
 footer #footer-icons {
   margin-top: 1.25rem;
   margin-bottom: 1rem;
 }
+
+/*# sourceMappingURL=main.css.map */
