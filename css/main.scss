@@ -223,10 +223,6 @@ section {
 footer {
   text-align: center;
 
-  #bear {
-    max-width: 110px;
-  }
-
   #email {
     @extend %hover-transition;
     @extend %backed-text;
