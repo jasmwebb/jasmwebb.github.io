@@ -1,5 +1,18 @@
 const projectsObjs = [
   {
+    name: "Kumho (금호) Compiler",
+    description: [
+      "This command-line program, written in <em class=\"highlight2\">Python</em>, automates the process of synthesizing a large volume of data (i.e., thousands of .DAT files) into meaningful graphs — work that was previously done manually and tediously.",
+      "Written for the associates of Kumho Eng, Inc., and submitted as a final project for Harvard University’s CS50."
+    ],
+    demo: "https://youtu.be/E5cMcW69Uc0",
+    source: "https://github.com/jasmwebb/kumho-compiler",
+    thumbnail: "/assets/thumbs/kumhocompilerthumb.png",
+    tags: [
+      "Python"
+    ]
+  },
+  {
     name: "Apply Guy",
     description: [
       "<em class=\"highlight2\">Friendship ended with spreadsheets. Now Apply Guy is my best friend.</em>",
@@ -89,19 +102,6 @@ const projectsObjs = [
     tags: [
       "Figma",
       "JAMstack"
-    ]
-  },
-  {
-    name: "Kumho (금호) Compiler",
-    description: [
-      "Prototype enterprise software written in <em class=\"highlight2\">Python</em> for a friend’s business. It automates the process of combing through a large volume of files for data and synthesizing that data into Microsoft Excel tables and graphs.",
-      "<em class='highlight'>Note:</em> The above thumbnail shows all the prompts and processes, however, since a data set is not specified in prompt #2, this particular execution did nothing."
-    ],
-    demo: null,
-    source: "https://github.com/jasmwebb/kumho-compiler",
-    thumbnail: "/assets/thumbs/kumhocompilerthumb.png",
-    tags: [
-      "Python"
     ]
   },
   {
