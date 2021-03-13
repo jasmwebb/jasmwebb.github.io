@@ -2,8 +2,8 @@
 name: Herowatch Scraper
 demo: https://raw.githubusercontent.com/jasmwebb/herowatch-scraper/main/heroes.json
 source: https://github.com/jasmwebb/herowatch-scraper
-tags: Python
-lastUpdate: 2020-11-08
+tech: Python
+date: 2020-11-08
 ---
 
 Grabs the heroes' data from the Overwatch wiki, then writes it all to a single JSON file. This was mainly an exercise in **regular expressions**.

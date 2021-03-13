@@ -2,8 +2,10 @@
 name: This Portfolio
 demo: 
 source: https://github.com/jasmwebb/jasminewebbdev
-tags: Eleventy, Sass
-lastUpdate: 2021-03-12
+tech: 
+  - Eleventy
+  - Sass
+date: 2021-03-12
 ---
 
-This very portfolio was made with **♡** with **Eleventy** + **Sass**.
+This very portfolio was delightfully migrated with **♡** to **Eleventy** + **Sass**.

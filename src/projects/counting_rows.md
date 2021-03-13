@@ -2,8 +2,11 @@
 name: Counting Rows
 demo: https://countingrows.netlify.app/
 source: https://github.com/jasmwebb/counting-rows
-tags: Svelte, Tailwind, JAMstack
-lastUpdate: 2020-10-15
+tech: 
+  - Svelte
+  - Tailwind
+  - JAMstack
+date: 2020-10-15
 ---
 
 A tool to keep track of the number of rows I've knitted of various charts and/or patterns.

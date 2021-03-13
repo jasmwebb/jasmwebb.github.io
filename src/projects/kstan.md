@@ -2,8 +2,10 @@
 name: K-STAN (code name)
 demo: https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1
 source: 
-tags: Figma, JAMstack
-lastUpdate: 2020-09-16
+tech: 
+  - Figma
+  - JAMstack
+date: 2020-09-16
 ---
 
 The simplest analogy would be *Yelp for K-Pop Stans*.

@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+
+<h1>Hey there! I'm Jasmine Webb.</h1>
+<p>A web developer</p>
+<p>It's literally in my last name!</p>
+
+<h2>Recent projects</h2>
+
+{% set recentProjects = collections.projects | reverse %}
+
+{%- for project in recentProjects.slice(0, 3) %}
+  <article>
+    <h3>{{ project.data.name }}</h3>
+    <div>{{ project.templateContent | safe }}</div>
+  </article>
+{%- endfor %}

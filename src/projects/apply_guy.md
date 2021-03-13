@@ -2,8 +2,11 @@
 name: Apply Guy
 demo: https://apply-guy.netlify.app/
 source: https://github.com/jasmwebb/apply-guy
-tags: Svelte, Firebase, JAMstack
-lastUpdate: 2021-02-13
+tech:
+  - Svelte
+  - Firebase
+  - JAMstack
+date: 2021-02-13
 ---
 
 *Friendship ended with spreadsheets. Now Apply Guy is my best friend.*

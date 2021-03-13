@@ -2,8 +2,8 @@
 name: Advent of Code 2020
 demo:
 source: https://github.com/jasmwebb/advent-of-code
-tags: Python
-lastUpdate: 2021-01-11
+tech: Python
+date: 2021-01-11
 ---
 
 My first year participating in Advent of Code; all of my solutions were written in **Python**.
