@@ -1,6 +1,12 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./public/css/");
-  eleventyConfig.addWatchTarget("./src/sass/");
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  eleventyConfig.addPassthroughCopy("public/css/");
+  eleventyConfig.addPassthroughCopy("assets/");
+
+  eleventyConfig.addWatchTarget("src/sass/");
 
   return {
     dir: {

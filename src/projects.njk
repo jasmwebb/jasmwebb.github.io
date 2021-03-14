@@ -1,0 +1,13 @@
+---
+title: Projects
+layout: base.njk
+eleventyNavigation:
+  key: Projects
+---
+
+{%- for project in collections.projects | reverse %}
+  <article>
+    <h3>{{ project.data.name }}</h3>
+    <div>{{ project.templateContent | safe }}</div>
+  </article>
+{%- endfor %}

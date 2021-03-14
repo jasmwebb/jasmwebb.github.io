@@ -6,15 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Jasmine Webb's portfolio page containing links to her resume, projects, LinkedIn, and GitHub.">
   <meta name="keywords" content="portfolio, web developer, software developer, junior developer, frontend developer, programmer, professional, javascript, python">
-  <link rel="icon" href="assets/branding/jasmine_favicon.png" type="image/x-icon">
+  <link rel="icon" href="assets/branding/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/main.css">
-  <title>Jasmine Webb Dev</title>
+  <title>Jasmine Webb Dev | {{ title }}</title>
 </head>
 
 <body> 
   <nav>
     <ul role="list">
-      <li><a href="#projects">Projects</a></li>
+      {%- for page in collections.all | eleventyNavigation %}
+        <li>
+          <a href="{{ page.url | url }}">{{ page.title }}</a>
+        </li>
+      {%- endfor %}
+
       <li><a href="/assets/webb_jasmine_resume.pdf">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>

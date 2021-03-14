@@ -1,5 +1,8 @@
 ---
+title: Web Developer
 layout: base.njk
+eleventyNavigation:
+  key: Home
 ---
 
 <h1>Hey there! I'm Jasmine Webb.</h1>
@@ -7,6 +10,10 @@ layout: base.njk
 <p>It's literally in my last name!</p>
 
 <h2>Recent projects</h2>
+
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sapiente reprehenderit iste, perspiciatis, culpa totam provident ratione unde error facilis magni, quos autem? Voluptates dolorem ex ab molestiae itaque adipisci quaerat sint quisquam beatae repellat inventore officia voluptatem, repudiandae earum deleniti obcaecati laborum rem.
+</p>
 
 {% set recentProjects = collections.projects | reverse %}
 
@@ -16,3 +23,5 @@ layout: base.njk
     <div>{{ project.templateContent | safe }}</div>
   </article>
 {%- endfor %}
+
+<a href="projects">See more</a>
