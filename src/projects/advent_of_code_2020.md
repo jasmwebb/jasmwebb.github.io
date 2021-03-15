@@ -1,8 +1,10 @@
 ---
 name: Advent of Code 2020
+thumb: aoc2020thumb.png
 demo:
 source: https://github.com/jasmwebb/advent-of-code
-tech: Python
+tech: 
+  - Python
 date: 2021-01-11
 ---
 

@@ -1,5 +1,6 @@
 ---
 name: Counting Rows
+thumb: countingrowsthumb.png
 demo: https://countingrows.netlify.app/
 source: https://github.com/jasmwebb/counting-rows
 tech: 

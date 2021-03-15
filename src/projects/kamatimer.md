@@ -1,5 +1,6 @@
 ---
 name: Kamatimer
+thumb: kamatimerthumb.png
 demo: https://jasmwebb.github.io/kamatimer/
 source: https://github.com/jasmwebb/kamatimer
 tech: 

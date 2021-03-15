@@ -1,5 +1,6 @@
 ---
 name: K-STAN (code name)
+thumb: kstanframes.png
 demo: https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1
 source: 
 tech: 

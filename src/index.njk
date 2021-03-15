@@ -5,23 +5,40 @@ eleventyNavigation:
   key: Home
 ---
 
-<h1>Hey there! I'm Jasmine Webb.</h1>
-<p>A web developer</p>
-<p>It's literally in my last name!</p>
+<p id="greeting">Hey there!</p>
+<h1>I'm Jasmine <mark>Web</mark>b</h1>
 
-<h2>Recent projects</h2>
+<section>
+  <h2 id="my-title">A web developer</h2>
+  <aside>It's literally my name!</aside>
+  
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sapiente reprehenderit iste, perspiciatis, culpa totam provident ratione unde error facilis magni, quos autem? Voluptates dolorem ex ab molestiae itaque adipisci quaerat sint quisquam beatae repellat inventore officia voluptatem, repudiandae earum deleniti obcaecati laborum rem.
+  </p>
+</section>
 
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore sapiente reprehenderit iste, perspiciatis, culpa totam provident ratione unde error facilis magni, quos autem? Voluptates dolorem ex ab molestiae itaque adipisci quaerat sint quisquam beatae repellat inventore officia voluptatem, repudiandae earum deleniti obcaecati laborum rem.
-</p>
+<section>
+  <h2>Recent projects</h2>
+  
+  {% set recentProjects = collections.projects | reverse %}
+  
+  {%- for project in recentProjects.slice(0, 3) %}
+    {% set src = "assets/thumbs/" + project.data.thumb %}
+    {% set alt = "A screenshot of this project, " + project.data.name %}
 
-{% set recentProjects = collections.projects | reverse %}
+    <article class="feed-item">
+      {% image src, alt, "100" %}
+      <h3>{{ project.data.name }}</h3>
+      
+      <ul role="list">
+        {%- for tech in project.data.tech %}
+        <li>{{ tech }}</li>
+        {%- endfor %}
+      </ul>
 
-{%- for project in recentProjects.slice(0, 3) %}
-  <article>
-    <h3>{{ project.data.name }}</h3>
-    <div>{{ project.templateContent | safe }}</div>
-  </article>
-{%- endfor %}
-
-<a href="projects">See more</a>
+      <p>{{ project.data.oneLiner }}</p>
+    </article>
+  {%- endfor %}
+  
+  <a href="projects" class="big-link">See more</a>
+</section>

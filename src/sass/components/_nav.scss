@@ -1,0 +1,22 @@
+header {
+  max-width: 50ch;
+  margin: 0 auto 4rem auto;
+  padding-top: 2rem;
+}
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    li a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

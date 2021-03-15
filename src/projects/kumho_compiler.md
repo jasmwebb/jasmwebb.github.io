@@ -1,8 +1,11 @@
 ---
 name: Kumho (금호) Compiler
+thumb: kumhocompilerthumb.png
 demo: https://youtu.be/E5cMcW69Uc0
 source: https://github.com/jasmwebb/kumho-compiler
-tech: Python
+tech:
+  - Python
+oneLiner: Automate the analysis of thousands of data logs and produce meaningful graphs in under a minute.
 date: 2021-03-08
 ---
 

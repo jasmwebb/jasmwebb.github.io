@@ -1,0 +1,46 @@
+.feed-item {
+  display: grid;
+  grid-template-columns: 100px 2fr;
+  grid-template-areas: 
+    "img name tags"
+    "img desc desc";
+  gap: 0.75rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--clr-dark-text);
+  padding: 0.6rem 0.75rem;
+  margin: 1rem 0;
+
+  picture {
+    grid-area: img;
+    
+    img {
+      height: 100px;
+      border-radius: 4px;
+    }
+  }
+
+  h3 {
+    grid-area: name;
+  }
+    
+  p {
+    grid-area: desc;
+    font-size: 0.95rem;
+  }
+
+  ul {
+    grid-area: tags;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 0.95rem;
+      color: var(--clr-dark-primary);
+
+      &:not(:last-of-type){
+        margin-right: 1rem;
+      }
+    }
+  }
+}

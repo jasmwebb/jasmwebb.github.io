@@ -1,8 +1,10 @@
 ---
 name: Herowatch Scraper
+thumb: herowatchthumb.png
 demo: https://raw.githubusercontent.com/jasmwebb/herowatch-scraper/main/heroes.json
 source: https://github.com/jasmwebb/herowatch-scraper
-tech: Python
+tech: 
+  - Python
 date: 2020-11-08
 ---
 

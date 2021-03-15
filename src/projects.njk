@@ -5,6 +5,10 @@ eleventyNavigation:
   key: Projects
 ---
 
+<p>
+  Here's a collection of my projects, ordered chronologically from most recent to oldest.
+</p>
+
 {%- for project in collections.projects | reverse %}
   <article>
     <h3>{{ project.data.name }}</h3>
