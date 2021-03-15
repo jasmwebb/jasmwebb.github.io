@@ -9,9 +9,30 @@ eleventyNavigation:
   Here's a collection of my projects, ordered chronologically from most recent to oldest.
 </p>
 
-{%- for project in collections.projects | reverse %}
-  <article>
-    <h3>{{ project.data.name }}</h3>
-    <div>{{ project.templateContent | safe }}</div>
-  </article>
-{%- endfor %}
+<section class="projects-list">
+  {%- for project in collections.projects | reverse %}
+    {% set src = "assets/thumbs/" + project.data.thumb %}
+    {% set alt = "A screenshot of this project, " + project.data.name %}
+
+    <article class="project-card">
+      <h3>{{ project.data.name }}</h3>
+
+      <div class="links">
+        <a href="{{ project.data.demo }}" class="demo-link">demo</a>
+        <a href="{{ project.data.source }}" class="source-link">source</a>
+      </div>
+
+      <div class="meat">
+        {% image src, alt, "200" %}
+  
+        <div class="description">{{ project.templateContent | safe }}</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        {%- for tech in project.data.tech %}
+        <li>{{ tech }}</li>
+        {%- endfor %}
+      </ul>
+    </article>
+  {%- endfor %}
+</section>

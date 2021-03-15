@@ -1,0 +1,15 @@
+ul {
+  grid-area: tags;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 0.95rem;
+    color: var(--clr-dark-primary);
+
+    &:not(:last-of-type){
+      margin-right: 1rem;
+    }
+  }
+}

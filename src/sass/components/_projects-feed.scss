@@ -1,14 +1,15 @@
 .feed-item {
+  position: relative;
   display: grid;
   grid-template-columns: 100px 2fr;
   grid-template-areas: 
     "img name tags"
     "img desc desc";
   gap: 0.75rem 1rem;
-  border-radius: 4px;
-  border: 1px solid var(--clr-dark-text);
-  padding: 0.6rem 0.75rem;
-  margin: 1rem 0;
+  padding: 2px 0 2px 1.25rem;
+  margin: 1rem 0 2rem 0;
+  border-radius: 2px;
+  border-left: 5px solid var(--clr-dark-primary);
 
   picture {
     grid-area: img;
@@ -26,21 +27,5 @@
   p {
     grid-area: desc;
     font-size: 0.95rem;
-  }
-
-  ul {
-    grid-area: tags;
-    display: flex;
-    padding: 0;
-    margin: 0;
-
-    li {
-      font-size: 0.95rem;
-      color: var(--clr-dark-primary);
-
-      &:not(:last-of-type){
-        margin-right: 1rem;
-      }
-    }
   }
 }

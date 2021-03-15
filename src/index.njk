@@ -28,9 +28,10 @@ eleventyNavigation:
 
     <article class="feed-item">
       {% image src, alt, "100" %}
+
       <h3>{{ project.data.name }}</h3>
       
-      <ul role="list">
+      <ul role="list" class="tags-list">
         {%- for tech in project.data.tech %}
         <li>{{ tech }}</li>
         {%- endfor %}

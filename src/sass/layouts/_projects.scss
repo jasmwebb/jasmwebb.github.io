@@ -1,0 +1,79 @@
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card {
+  display: grid;
+  grid-template-areas:
+    "name links"
+    "meat meat"
+    "tags tags";
+  row-gap: 0.75rem;
+  margin: 2rem 0;
+  
+  picture {
+    position: relative;
+    float: left;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    shape-outside: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    margin-right: 0.75rem;
+    border-left: 6px solid var(--clr-dark-primary);
+    border-radius: 4px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(120deg, (var(--clr-dark-primary)), var(--clr-dark-bg));
+      opacity: 0.45;
+    }
+  }
+
+  h3 {
+    grid-area: name;
+  }
+
+  .links {
+    margin-left: auto;
+    grid-area: links;
+
+    a {
+      border-radius: 2px;
+      border: 1px solid var(--clr-dark-accent);
+      padding: 0.25rem 0.75rem;
+      text-decoration: none;
+      
+      &:hover {
+        border: 1px solid var(--clr-dark-primary);
+      }
+    }
+  }
+
+  .meat {
+    grid-area: meat;
+  }
+
+  .description {
+    font-size: 0.95rem;
+
+    p:not(:last-of-type){
+      margin-bottom: 1rem;
+    }
+  }
+
+  .tags-list{
+    li {
+      padding-top: 7px;
+    }
+
+    &::before {
+      content: "#";
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+}
