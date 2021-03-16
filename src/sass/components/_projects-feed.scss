@@ -6,7 +6,6 @@
     "img name tags"
     "img desc desc";
   gap: 0.75rem 1rem;
-  padding: 2px 0 2px 1.25rem;
   margin: 1rem 0 2rem 0;
   border-radius: 2px;
   border-left: 5px solid var(--clr-dark-primary);
@@ -16,7 +15,18 @@
     
     img {
       height: 100px;
-      border-radius: 4px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100px;
+      background: linear-gradient(to right, transparent, rgba(39, 39, 42, 0.45)),
+        linear-gradient(to right, rgba(248, 161, 13, 0.25), transparent 50%);
     }
   }
 

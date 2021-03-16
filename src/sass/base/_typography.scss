@@ -41,7 +41,7 @@ h1 {
   font-weight: 400;
 }
 
-aside {
+.speech-bubble {
   display: inline-block;
   position: relative;
   background-color: var(--clr-dark-primary);
@@ -51,7 +51,7 @@ aside {
   border-radius: 2px;
 }
 
-aside::before {
+.speech-bubble::before {
   content: "";
   display: block;
   position: absolute;

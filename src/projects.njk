@@ -5,26 +5,41 @@ eleventyNavigation:
   key: Projects
 ---
 
+<h2>Projects</h2>
 <p>
-  Here's a collection of my projects, ordered chronologically from most recent to oldest.
+  Here you'll find a collection of my projects, ordered chronologically from most recent to oldest.
 </p>
 
-<section class="projects-list">
-  {%- for project in collections.projects | reverse %}
+<filter-container data-oninit>
+  <form>
+    <label>Filter by tech:</label>
+    <select data-filter-bind="tech" data-filter-delimiter=",">
+      <option selected value="">All</option>
+
+      {%- for tech in collections.techList %}
+        <option value="{{ tech }}">{{ tech }}</option>
+      {%- endfor %}
+    </select>
+
+    <em data-filter-results="project/projects" aria-live="polite"></em>
+  </form>
+  
+  <section class="projects-list">
+    {%- for project in collections.projects | reverse %}
     {% set src = "assets/thumbs/" + project.data.thumb %}
     {% set alt = "A screenshot of this project, " + project.data.name %}
-
-    <article class="project-card">
+    
+    <article class="project-card" data-filter-tech="{{ project.data.tech }}">
       <h3>{{ project.data.name }}</h3>
-
+      
       <div class="links">
         <a href="{{ project.data.demo }}" class="demo-link">demo</a>
         <a href="{{ project.data.source }}" class="source-link">source</a>
       </div>
-
+      
       <div class="meat">
         {% image src, alt, "200" %}
-  
+        
         <div class="description">{{ project.templateContent | safe }}</div>
       </div>
       
@@ -34,5 +49,8 @@ eleventyNavigation:
         {%- endfor %}
       </ul>
     </article>
-  {%- endfor %}
-</section>
+    {%- endfor %}
+  </section>
+</filter-container>
+  
+<script type="module" src="/js/filter-container.js"></script>
