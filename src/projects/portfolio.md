@@ -1,6 +1,6 @@
 ---
 name: This Portfolio
-thumb: jasminethumb.png
+thumb: portfoliothumb.png
 demo: 
 source: https://github.com/jasmwebb/jasminewebbdev
 tech: 
