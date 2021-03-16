@@ -41,27 +41,6 @@ h1 {
   font-weight: 400;
 }
 
-.speech-bubble {
-  display: inline-block;
-  position: relative;
-  background-color: var(--clr-dark-primary);
-  color: var(--clr-dark-bg);
-  padding: 0.2rem 1rem;
-  margin: 5px 0 2.5rem;
-  border-radius: 2px;
-}
-
-.speech-bubble::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: 42.5px;
-  border-left: 5px solid transparent;  /* left arrow slant */
-	border-right: 5px solid transparent; /* right arrow slant */
-	border-bottom: 5px solid var(--clr-dark-primary);
-}
-
 .big-link {
   font-size: 1.5rem;
 }
