@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  background-color: var(--bg-clr);
+}
+
+.dark {
+  --bg-clr: var(--black);
+  --text-clr: var(--white);
+  --primary-clr: var(--orange);
+  --accent-clr: var(--purple);
+  --bg-vals: var(--black-vals);
+  --primary-vals: var(--orange-vals);
+  --gradient-lg: linear-gradient(120deg, transparent, var(--bg-clr) 85%),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+  --gradient-sm: linear-gradient(to right, transparent, hsla(var(--bg-vals), 0.45)),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.25), transparent 50%);
+}
+.dark .logo {
+  filter: invert(1);
+}
+
+.light {
+  --bg-clr: var(--white);
+  --text-clr: var(--black);
+  --primary-clr: var(--red);
+  --accent-clr: var(--blue-purple);
+  --bg-vals: var(--white-vals);
+  --primary-vals: var(--red-vals);
+  --gradient-lg: linear-gradient(120deg, transparent, hsla(var(--bg-vals), 0.3) 85%),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+  --gradient-sm: linear-gradient(to right, transparent, hsla(var(--bg-vals), 0.3)),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --black: hsl(240, 4%, 16%);
+  --white: hsl(60, 12%, 95%);
+  --red: hsl(0, 50%, 51%);
+  --orange: hsl(38, 94%, 51%);
+  --blue-purple: hsl(246, 54%, 58%);
+  --purple: hsl(269, 97%, 85%);
+  --black-vals: 240, 4%, 16%;
+  --white-vals: 60, 12%, 95%;
+  --red-vals: 0, 50%, 51%;
+  --orange-vals: 38, 94%, 51%;
+  --bez: cubic-bezier(0.33,-0.67,0.53,1.67);
+  --text-sm: 0.975rem;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.15rem;
+  color: var(--text-clr);
+}
+
+a {
+  color: var(--accent-clr);
+  font-weight: 700;
+}
+a.svg {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-clr);
+}
+
+strong,
+em,
+mark {
+  color: var(--primary-clr);
+}
+
+mark {
+  background-color: transparent;
+}
+
+#greeting {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  line-height: 0.75;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+#my-title {
+  font-weight: 400;
+}
+
+.big-link {
+  font-size: 1.5rem;
+}
+
+body {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  column-gap: 0.5rem;
+  grid-template-areas: "name links" "meat meat" "tags tags";
+  row-gap: 0.75rem;
+  margin: 2rem 0;
+}
+.project-card h3 {
+  grid-area: name;
+}
+.project-card .links {
+  justify-self: end;
+  grid-area: links;
+  align-self: center;
+}
+.project-card .links p {
+  display: inline;
+  font-weight: 700;
+}
+.project-card .links a, .project-card .links p {
+  border-radius: 2px;
+  border: 1px solid var(--accent-clr);
+  padding: 0.25rem 0.75rem;
+}
+.project-card .links a {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .project-card .links a {
+    font-size: 1rem;
+  }
+}
+.project-card .links a:hover {
+  border: 1px solid var(--primary-clr);
+}
+.project-card .img-desc {
+  grid-area: meat;
+}
+.project-card .img-desc picture {
+  position: relative;
+  float: left;
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+  shape-outside: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+  margin-right: 0.75rem;
+  border-left: 6px solid var(--primary-clr);
+  border-radius: 4px;
+}
+.project-card .img-desc picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--gradient-lg);
+}
+@media screen and (max-width: 768px) {
+  .project-card .img-desc picture, .project-card .img-desc img {
+    width: 100px;
+    height: 100px;
+  }
+}
+.project-card .description {
+  font-size: var(--text-sm);
+}
+.project-card .description p:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.filter-tech--hide {
+  display: none;
+}
+
+form {
+  margin: 1.5rem 0;
+}
+form em {
+  display: inline-block;
+}
+
+select {
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+  border-radius: 2px;
+  border: 1px solid var(--accent-clr);
+  padding: 0.25rem;
+}
+select::selection:hover {
+  background-color: var(--accent-clr);
+}
+
+footer {
+  max-width: 75ch;
+  margin: 0 auto 4rem auto;
+}
+footer div {
+  margin-top: 1.25rem;
+}
+
+header {
+  max-width: 55ch;
+  margin: 0 auto 4rem auto;
+  padding-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+  header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    display: grid;
+    row-gap: 0.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+  }
+  nav img {
+    grid-row: 1;
+    grid-column: 1/span 3;
+  }
+  nav a {
+    grid-row: 2;
+  }
+  nav #mode-button {
+    grid-row: 3;
+    grid-column: 1/span 3;
+  }
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+nav a, nav button {
+  transition: transform 200ms var(--bez);
+}
+nav a:hover, nav button:hover {
+  transform: translateY(4px);
+}
+
+#mode-button {
+  background: none;
+  border: none;
+  color: var(--accent-clr);
+  cursor: pointer;
+}
+#mode-button:hover {
+  color: var(--primary-clr);
+}
+
+.feed-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 2fr;
+  grid-template-areas: "img name tags" "img desc desc";
+  gap: 0.75rem 1rem;
+  margin: 1rem 0 2rem 0;
+  transition: transform 275ms var(--bez);
+}
+@media screen and (max-width: 768px) {
+  .feed-item {
+    grid-template-columns: 100px auto;
+    grid-template-areas: "img name" "img tags" "desc desc";
+  }
+}
+.feed-item:hover {
+  transform: scale(1.1);
+}
+.feed-item picture {
+  border-radius: 2px;
+  border-left: 5px solid var(--primary-clr);
+  grid-area: img;
+}
+.feed-item picture img {
+  height: 100px;
+  border-radius: 0 4px 4px 0;
+}
+.feed-item picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  background: var(--gradient-sm);
+}
+.feed-item h3 {
+  grid-area: name;
+}
+.feed-item p {
+  grid-area: desc;
+  font-size: var(--text-sm);
+}
+
+.speech-bubble {
+  display: inline-block;
+  position: relative;
+  background-color: var(--primary-clr);
+  color: var(--bg-clr);
+  padding: 0.2rem 1.5rem;
+  margin: 5px 0 2.5rem;
+  border-radius: 2px;
+  animation: drop 600ms var(--bez);
+}
+.speech-bubble::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 42.5px;
+  border-left: 5px solid transparent;
+  /* left arrow slant */
+  border-right: 5px solid transparent;
+  /* right arrow slant */
+  border-bottom: 5px solid var(--primary-clr);
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.tags-list {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.tags-list::before {
+  content: "#";
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+.tags-list li {
+  padding-top: 5px;
+  font-size: 0.95rem;
+  color: var(--primary-clr);
+}
+.tags-list li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
