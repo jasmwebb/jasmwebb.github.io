@@ -1,27 +1,54 @@
+@use "../abstracts/" as *;
+
 header {
   max-width: 55ch;
   margin: 0 auto 4rem auto;
   padding-top: 2rem;
+
+  @include mobile {
+    margin-bottom: 1.5rem;
+  }
 }
 
 nav {
-  ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-  }
-  
-  li {
-    transition: transform 200ms var(--bez);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 
-    &:hover {
-      transform: translateY(4px);
+  @include mobile {
+    display: grid;
+    row-gap: 0.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+
+    img {
+      grid-row: 1;
+      grid-column: 1 / span 3;
+    }
+
+    a {
+      grid-row: 2;
+    }
+
+    #mode-button {
+      grid-row: 3;
+      grid-column: 1 / span 3;
     }
   }
   
   a {
     text-decoration: none;
     font-size: 1.2rem;
+  }
+
+  a, button {
+    transition: transform 200ms var(--bez);
+  
+    &:hover {
+      transform: translateY(4px);
+    }
   }
 }
 

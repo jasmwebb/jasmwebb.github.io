@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 body {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.15rem;
@@ -35,6 +37,10 @@ mark {
 h1 {
   font-size: 2.75rem;
   line-height: 0.75;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
 }
 
 #my-title {

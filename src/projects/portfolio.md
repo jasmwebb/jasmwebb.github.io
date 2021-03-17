@@ -5,6 +5,7 @@ demo: https://jasminewebb.dev
 source: https://github.com/jasmwebb/jasminewebbdev
 tech: 
   - Eleventy
+  - JavaScript
   - Sass
   - JAMstack
 oneLiner: You're looking at it!

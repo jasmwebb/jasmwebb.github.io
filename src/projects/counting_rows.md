@@ -5,6 +5,7 @@ demo: https://countingrows.netlify.app/
 source: https://github.com/jasmwebb/counting-rows
 tech: 
   - Svelte
+  - JavaScript
   - Tailwind
   - JAMstack
 date: 2020-10-15

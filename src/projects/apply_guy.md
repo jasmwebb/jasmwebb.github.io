@@ -5,6 +5,7 @@ demo: https://apply-guy.netlify.app/
 source: https://github.com/jasmwebb/apply-guy
 tech:
   - Svelte
+  - JavaScript
   - Firebase
   - JAMstack
 oneLiner: Friendship ended with spreadsheets (to keep track of job applications). Now Apply Guy is my best friend.
