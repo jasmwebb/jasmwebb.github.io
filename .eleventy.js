@@ -31,6 +31,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("assets/webb_jasmine_resume.pdf");
   eleventyConfig.addPassthroughCopy("assets/branding");
+  eleventyConfig.addPassthroughCopy("src/js/");
   eleventyConfig.addPassthroughCopy({"node_modules/@zachleat/filter-container/*.js": "js"});
 
   eleventyConfig.addCollection("techList", function(collectionApi) {

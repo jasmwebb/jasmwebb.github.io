@@ -24,3 +24,14 @@ nav {
     font-size: 1.2rem;
   }
 }
+
+#mode-button {
+  background: none;
+  border: none;
+  color: var(--accent-clr);
+  cursor: pointer;
+  
+  &:hover {
+    color: var(--primary-clr);
+  }
+}
