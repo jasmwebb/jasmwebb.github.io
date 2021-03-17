@@ -7,6 +7,7 @@ if (!mode) {
   // User's first visit, no mode saved, go by system settings
   const userPreference = userPrefersDark ? "dark" : "light";
   body.classList.add(userPreference);
+  localStorage.setItem("mode", body.classList.value);
 } else if (mode === "dark") {
   body.classList.add("dark");
 } else if (mode === "light") {
