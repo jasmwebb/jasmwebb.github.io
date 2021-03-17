@@ -38,7 +38,13 @@ eleventyNavigation:
         {%- else %}
           <p>no demo</p>
         {%- endif %}
-        <a href="{{ project.data.source }}" class="source-link">source</a>
+
+        {%- if project.data.source %}
+          <a href="{{ project.data.source }}" class="source-link">source</a>
+        {%- else %}
+          <p>no code</p>
+        {%- endif %}
+
       </div>
       
       <div class="img-desc">
