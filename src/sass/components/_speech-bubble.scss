@@ -1,0 +1,38 @@
+.speech-bubble {
+  display: inline-block;
+  position: relative;
+  background-color: var(--primary-clr);
+  color: var(--bg-clr);
+  padding: 0.2rem 1.5rem;
+  margin: 5px 0 2.5rem;
+  border-radius: 2px;
+  animation: drop 600ms var(--bez);
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 42.5px;
+    border-left: 5px solid transparent;  /* left arrow slant */
+    border-right: 5px solid transparent; /* right arrow slant */
+    border-bottom: 5px solid var(--primary-clr);
+  }
+}
+
+
+@keyframes drop {
+  0% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  
+  90% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+}
+}

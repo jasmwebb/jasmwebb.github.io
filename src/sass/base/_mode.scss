@@ -1,0 +1,33 @@
+.dark {
+  --bg-clr: var(--black);
+  --text-clr: var(--white);
+  --primary-clr: var(--orange);
+  --accent-clr: var(--purple);
+  
+  --bg-vals: var(--black-vals);
+  --primary-vals: var(--orange-vals);
+
+  --gradient-lg: linear-gradient(120deg, transparent, var(--bg-clr) 85%),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+  --gradient-sm: linear-gradient(to right, transparent, hsla(var(--bg-vals), 0.45)),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.25), transparent 50%);
+  
+  .logo {
+    filter: invert(1);
+  }
+}
+
+.light {
+  --bg-clr: var(--white);
+  --text-clr: var(--black);
+  --primary-clr: var(--red);
+  --accent-clr: var(--blue-purple);
+  
+  --bg-vals: var(--white-vals);
+  --primary-vals: var(--red-vals);
+
+  --gradient-lg: linear-gradient(120deg, transparent, hsla(var(--bg-vals), 0.3) 85%),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+  --gradient-sm: linear-gradient(to right, transparent, hsla(var(--bg-vals), 0.3)),
+    linear-gradient(to right, hsla(var(--primary-vals), 0.15), transparent 50%);
+}

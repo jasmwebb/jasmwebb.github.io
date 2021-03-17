@@ -1,1 +1,4 @@
-/doodles/
+doodles/
+node_modules
+*.txt
+.*/

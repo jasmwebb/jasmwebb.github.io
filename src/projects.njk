@@ -1,0 +1,60 @@
+---
+title: Projects
+layout: base.njk
+eleventyNavigation:
+  key: Projects
+---
+
+<h2>Projects</h2>
+<p>
+  Here you'll find a collection of my projects, ordered chronologically from most recent to oldest.
+</p>
+
+<filter-container data-oninit>
+  <form>
+    <label>Filter by tech:</label>
+    <select data-filter-bind="tech" data-filter-delimiter=",">
+      <option selected value="">All</option>
+
+      {%- for tech in collections.techList %}
+        <option value="{{ tech }}">{{ tech }}</option>
+      {%- endfor %}
+    </select>
+
+    <em data-filter-results="project/projects" aria-live="polite"></em>
+  </form>
+  
+  <section class="projects-list">
+    {%- for project in collections.projects | reverse %}
+    {% set src = "assets/thumbs/" + project.data.thumb %}
+    {% set alt = "A screenshot of this project, " + project.data.name %}
+    
+    <article class="project-card" data-filter-tech="{{ project.data.tech }}">
+      <h3>{{ project.data.name }}</h3>
+      
+      <div class="links">
+        {%- if project.data.demo %}
+          <a href="{{ project.data.demo }}" class="demo-link">demo</a>
+        {%- else %}
+          <p>no demo</p>
+        {%- endif %}
+        <a href="{{ project.data.source }}" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        {% image src, alt, "200" %}
+        
+        <div class="description">{{ project.templateContent | safe }}</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        {%- for tech in project.data.tech %}
+        <li>{{ tech }}</li>
+        {%- endfor %}
+      </ul>
+    </article>
+    {%- endfor %}
+  </section>
+</filter-container>
+  
+<script type="module" src="/js/filter-container.js"></script>

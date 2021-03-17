@@ -1,0 +1,23 @@
+.tags-list {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  
+  &::before {
+    content: "#";
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  li {
+    padding-top: 5px;
+    font-size: 0.95rem;
+    color: var(--primary-clr);
+
+    &:not(:last-of-type){
+      margin-right: 1rem;
+    }
+  }
+}

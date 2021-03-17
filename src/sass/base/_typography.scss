@@ -1,0 +1,52 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.15rem;
+  color: var(--text-clr);
+}
+
+a {
+  color: var(--accent-clr);
+  font-weight: 700;
+
+  &.svg {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: var(--primary-clr);
+  }
+}
+
+strong,
+em,
+mark {
+  color: var(--primary-clr);
+}
+
+mark {
+  background-color: transparent;
+}
+
+#greeting {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  line-height: 0.75;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
+}
+
+#my-title {
+  font-weight: 400;
+}
+
+.big-link {
+  font-size: 1.5rem;
+}

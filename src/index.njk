@@ -1,0 +1,47 @@
+---
+title: Web Developer
+layout: base.njk
+eleventyNavigation:
+  key: Home
+---
+
+<p id="greeting">Hey there!</p>
+<h1>I'm Jasmine <mark>Web</mark>b</h1>
+
+<section>
+  <h2 id="my-title">A web developer</h2>
+  <aside class="speech-bubble">It's literally my name!</aside>
+  
+  <p>
+    When I first learned to code, my proudest accomplishments amounted to custom Myspace, Tumblr, and Quizilla layouts and themes. About a decade later, I earned my Bachelor's in Psychology and taught English to kids in South Korea <strong>♡</strong>. Nowadays, I gravitate towards Python and JAMstack applications, but I'm always up for learning new things!
+  </p>
+</section>
+
+<section>
+  <h2>Recent projects</h2>
+  
+  {% set recentProjects = collections.projects | reverse %}
+  
+  {%- for project in recentProjects.slice(0, 3) %}
+    {% set src = "assets/thumbs/" + project.data.thumb %}
+    {% set alt = "A screenshot of this project, " + project.data.name %}
+
+    <article class="feed-item">
+      {% image src, alt, "100" %}
+
+      <h3>
+        <a href="{{ project.data.demo }}">{{ project.data.name }}</a>
+      </h3>
+      
+      <ul role="list" class="tags-list">
+        {%- for tech in project.data.tech %}
+        <li>{{ tech }}</li>
+        {%- endfor %}
+      </ul>
+
+      <p>{{ project.data.oneLiner }}</p>
+    </article>
+  {%- endfor %}
+  
+  <a href="projects" class="big-link">See more</a>
+</section>

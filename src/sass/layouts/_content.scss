@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+body {
+  max-width: 75ch;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 1rem;
+  }
+}
+
+section {
+  margin-bottom: 4rem;
+}

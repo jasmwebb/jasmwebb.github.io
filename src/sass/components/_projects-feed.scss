@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+
+.feed-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 2fr;
+  grid-template-areas: 
+    "img name tags"
+    "img desc desc";
+  gap: 0.75rem 1rem;
+  margin: 1rem 0 2rem 0;
+  transition: transform 275ms var(--bez);
+  
+  @include mobile {
+    grid-template-columns: 100px auto;
+    grid-template-areas:
+    "img name"
+    "img tags"
+    "desc desc";
+  }
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  picture {
+    border-radius: 2px;
+    border-left: 5px solid var(--primary-clr);
+    grid-area: img;
+    
+    img {
+      height: 100px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100px;
+      background: var(--gradient-sm);
+    }
+  }
+
+  h3 {
+    grid-area: name;
+  }
+    
+  p {
+    grid-area: desc;
+    font-size: var(--text-sm);
+  }
+}

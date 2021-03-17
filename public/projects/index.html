@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jasmine Webb's portfolio page containing links to her resume, projects, LinkedIn, and GitHub.">
+  <meta name="keywords" content="portfolio, web developer, software developer, junior developer, frontend developer, programmer, professional, javascript, python">
+  <link rel="icon" href="/assets/branding/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Jasmine Webb Dev | Projects</title>
+
+  <script defer src="/js/mode.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+
+      <img class="logo" src="/assets/branding/spider.png" alt="A spider doodle logo">
+  
+      <a href="/assets/webb_jasmine_resume.pdf">Resume</a>
+
+      <button id="mode-button">
+        <svg width="1.5rem" height="1.5rem" fill="none" stroke="currentColor" viewBox="0 -2 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    
+<h2>Projects</h2>
+<p>
+  Here you'll find a collection of my projects, ordered chronologically from most recent to oldest.
+</p>
+
+<filter-container data-oninit>
+  <form>
+    <label>Filter by tech:</label>
+    <select data-filter-bind="tech" data-filter-delimiter=",">
+      <option selected value="">All</option>
+        <option value="Eleventy">Eleventy</option>
+        <option value="Figma">Figma</option>
+        <option value="Firebase">Firebase</option>
+        <option value="JAMstack">JAMstack</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Sass">Sass</option>
+        <option value="Svelte">Svelte</option>
+        <option value="Tailwind">Tailwind</option>
+    </select>
+
+    <em data-filter-results="project/projects" aria-live="polite"></em>
+  </form>
+  
+  <section class="projects-list">
+    
+    
+    
+    <article class="project-card" data-filter-tech="Eleventy,JavaScript,Sass,JAMstack">
+      <h3>This Portfolio</h3>
+      
+      <div class="links">
+          <a href="https://jasminewebb.dev" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/jasminewebbdev" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/5b17a298-100.avif 100w, /assets/thumbs/5b17a298-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/5b17a298-100.jpeg 100w, /assets/thumbs/5b17a298-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/5b17a298-100.webp 100w, /assets/thumbs/5b17a298-200.webp 200w" sizes="200"><img alt="A screenshot of this project, This Portfolio" loading="lazy" decoding="async" src="/assets/thumbs/5b17a298-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>This very portfolio was delightfully migrated with <strong>♡</strong> to <a href="https://www.11ty.dev/">Eleventy</a> + <a href="https://sass-lang.com/">Sass</a> + <a href="https://github.com/zachleat/filter-container">this nifty filter web component</a>.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Eleventy</li>
+        <li>JavaScript</li>
+        <li>Sass</li>
+        <li>JAMstack</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Python">
+      <h3>Kumho (금호) Compiler</h3>
+      
+      <div class="links">
+          <a href="https://youtu.be/E5cMcW69Uc0" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/kumho-compiler" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/9832a7d5-100.avif 100w, /assets/thumbs/9832a7d5-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/9832a7d5-100.jpeg 100w, /assets/thumbs/9832a7d5-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/9832a7d5-100.webp 100w, /assets/thumbs/9832a7d5-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Kumho (금호) Compiler" loading="lazy" decoding="async" src="/assets/thumbs/9832a7d5-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>This command-line program, written in <strong>Python</strong>, automates the process of synthesizing a large volume of data (i.e., thousands of .DAT files) into meaningful graphs — work that was previously done manually and tediously.</p>
+<p>Written for the associates of Kumho Eng, Inc., and submitted as a final project for Harvard University’s <a href="https://cs50.harvard.edu/x/2021/">CS50</a>.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Python</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Svelte,JavaScript,Firebase,JAMstack">
+      <h3>Apply Guy</h3>
+      
+      <div class="links">
+          <a href="https://apply-guy.netlify.app/" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/apply-guy" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/3918ae1d-100.avif 100w, /assets/thumbs/3918ae1d-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/3918ae1d-100.jpeg 100w, /assets/thumbs/3918ae1d-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/3918ae1d-100.webp 100w, /assets/thumbs/3918ae1d-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Apply Guy" loading="lazy" decoding="async" src="/assets/thumbs/3918ae1d-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>I wanted a way to keep track of my and my partner's job hunt progress that wasn't just a boring spreadsheet, so this <strong>CRUD</strong> application was born.</p>
+<p>Frontend built with <a href="https://svelte.dev/">Svelte</a>; backend (authentication and database) served by <a href="https://firebase.google.com/">Firebase</a>.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Svelte</li>
+        <li>JavaScript</li>
+        <li>Firebase</li>
+        <li>JAMstack</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Python">
+      <h3>Advent of Code 2020</h3>
+      
+      <div class="links">
+          <p>no demo</p>
+        <a href="https://github.com/jasmwebb/advent-of-code" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/9bfbdb8f-100.avif 100w, /assets/thumbs/9bfbdb8f-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/9bfbdb8f-100.jpeg 100w, /assets/thumbs/9bfbdb8f-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/9bfbdb8f-100.webp 100w, /assets/thumbs/9bfbdb8f-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Advent of Code 2020" loading="lazy" decoding="async" src="/assets/thumbs/9bfbdb8f-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>My first year participating in Advent of Code; all of my solutions were written in <strong>Python</strong>.</p>
+<p>This was a fun challenge in problem solving, utilizing appropriate data structures, implementing test suites (although I didn't think to do that until the last few days), and catching up. Lots of catching up.</p>
+<p>I look forward to saving Christmas all over again next year.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Python</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Python">
+      <h3>Herowatch Scraper</h3>
+      
+      <div class="links">
+          <a href="https://raw.githubusercontent.com/jasmwebb/herowatch-scraper/main/heroes.json" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/herowatch-scraper" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/5a13c23b-100.avif 100w, /assets/thumbs/5a13c23b-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/5a13c23b-100.jpeg 100w, /assets/thumbs/5a13c23b-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/5a13c23b-100.webp 100w, /assets/thumbs/5a13c23b-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Herowatch Scraper" loading="lazy" decoding="async" src="/assets/thumbs/5a13c23b-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>Grabs the heroes' data from the Overwatch wiki, then writes it all to a single JSON file. This was mainly an exercise in <strong>regular expressions</strong>.</p>
+<p>Written in <strong>Python</strong> and manually run from the command line.</p>
+<p>Demo link leads to the generated JSON file; best viewed with a JSON formatting browser extension installed.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Python</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Svelte,JavaScript,Tailwind,JAMstack">
+      <h3>Counting Rows</h3>
+      
+      <div class="links">
+          <a href="https://countingrows.netlify.app/" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/counting-rows" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/b634e2b8-100.avif 100w, /assets/thumbs/b634e2b8-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/b634e2b8-100.jpeg 100w, /assets/thumbs/b634e2b8-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/b634e2b8-100.webp 100w, /assets/thumbs/b634e2b8-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Counting Rows" loading="lazy" decoding="async" src="/assets/thumbs/b634e2b8-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>A tool to keep track of the number of rows I've knitted of various charts and/or patterns.</p>
+<p>Similar extant tools have intrusive ads and/or too many unnecessary features for my liking. Since knitting is already complicated enough, I sought to make something barebones.</p>
+<p>Each counter is saved to and loaded from <code>localStorage</code> for extra simplicity.</p>
+<p>Made with <a href="https://svelte.dev/">Svelte</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a>.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Svelte</li>
+        <li>JavaScript</li>
+        <li>Tailwind</li>
+        <li>JAMstack</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="Figma,JAMstack">
+      <h3>K-STAN (code name)</h3>
+      
+      <div class="links">
+          <a href="https://www.figma.com/file/lvdKpHHm7cok0fVFtGHdEM/Prototypes?node-id=0%3A1" class="demo-link">demo</a>
+        <a href="" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/1ce51069-100.avif 100w, /assets/thumbs/1ce51069-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/1ce51069-100.jpeg 100w, /assets/thumbs/1ce51069-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/1ce51069-100.webp 100w, /assets/thumbs/1ce51069-200.webp 200w" sizes="200"><img alt="A screenshot of this project, K-STAN (code name)" loading="lazy" decoding="async" src="/assets/thumbs/1ce51069-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>The simplest analogy would be <em>Yelp for K-Pop Stans</em>.</p>
+<p>A one-stop resource to locate and bookmark cafes, restaurants, etc. associated with popular Korean Pop idols. K-Pop fans who are planning a trip to Korea have a covenient way to access this information in one place, as opposed to having to piece it together from several fan sites, the number of which grows exponentially by the number of groups the fan supports.</p>
+<p>This is a collaborative project that currently has no code; but we are designing K-STAN as a <strong>JAMstack</strong> application.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>Figma</li>
+        <li>JAMstack</li>
+      </ul>
+    </article>
+    
+    
+    
+    <article class="project-card" data-filter-tech="JavaScript,Sass,JAMstack">
+      <h3>Kamatimer</h3>
+      
+      <div class="links">
+          <a href="https://jasmwebb.github.io/kamatimer/" class="demo-link">demo</a>
+        <a href="https://github.com/jasmwebb/kamatimer" class="source-link">source</a>
+      </div>
+      
+      <div class="img-desc">
+        <picture><source type="image/avif" srcset="/assets/thumbs/5898b223-100.avif 100w, /assets/thumbs/5898b223-200.avif 200w" sizes="200"><source type="image/jpeg" srcset="/assets/thumbs/5898b223-100.jpeg 100w, /assets/thumbs/5898b223-200.jpeg 200w" sizes="200"><source type="image/webp" srcset="/assets/thumbs/5898b223-100.webp 100w, /assets/thumbs/5898b223-200.webp 200w" sizes="200"><img alt="A screenshot of this project, Kamatimer" loading="lazy" decoding="async" src="/assets/thumbs/5898b223-100.jpeg" width="200" height="200"></picture>
+        
+        <div class="description"><p>A simple pomodoro timer.</p>
+</div>
+      </div>
+      
+      <ul role="list" class="tags-list">
+        <li>JavaScript</li>
+        <li>Sass</li>
+        <li>JAMstack</li>
+      </ul>
+    </article>
+  </section>
+</filter-container>
+  
+<script type="module" src="/js/filter-container.js"></script>
+  </main>
+
+  <footer id="contact">
+    <h2>Let's talk</h2>
+    <a href="mailto:hey@jasminewebb.dev" class="big-link">hey@jasminewebb.dev</a>
+    
+    <div>
+      <a href="https://www.linkedin.com/in/jasmwebb/" class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+
+      <a href="https://github.com/jasmwebb" class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

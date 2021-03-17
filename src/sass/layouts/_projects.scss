@@ -1,0 +1,115 @@
+@use "../abstracts/" as *;
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  column-gap: 0.5rem;
+  grid-template-areas:
+    "name links"
+    "meat meat"
+    "tags tags";
+  row-gap: 0.75rem;
+  margin: 2rem 0;
+
+  h3 {
+    grid-area: name;
+  }
+
+  .links {
+    justify-self: end;
+    grid-area: links;
+    align-self: center;
+
+    p {
+      display: inline;
+      font-weight: 700;
+    }
+
+    a, p {
+      border-radius: 2px;
+      border: 1px solid var(--accent-clr);
+      padding: 0.25rem 0.75rem;
+
+    }
+    
+    a {
+      text-decoration: none;
+      
+      @include mobile {
+        font-size: 1rem;
+      }
+      
+      &:hover {
+        border: 1px solid var(--primary-clr);
+      }
+    }
+  }
+
+  .img-desc {
+    grid-area: meat;
+
+    picture {
+      position: relative;
+      float: left;
+      clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+      shape-outside: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+      margin-right: 0.75rem;
+      border-left: 6px solid var(--primary-clr);
+      border-radius: 4px;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--gradient-lg);
+      }
+    }
+
+    @include mobile {
+      picture, img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .description {
+    font-size: var(--text-sm);
+
+    p:not(:last-of-type){
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.filter-tech--hide {
+  display: none;
+}
+
+form {
+  margin: 1.5rem 0;
+
+  em {
+    display: inline-block;
+  }
+}
+
+select {
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
+  border-radius: 2px;
+  border: 1px solid var(--accent-clr);
+  padding: 0.25rem;
+
+  &::selection:hover {
+    background-color: var(--accent-clr);
+  }
+}
