@@ -1,0 +1,19 @@
+// https://tailwindcss.com/docs/customizing-colors#color-palette-reference
+
+:root {
+  --black: hsl(240, 4%, 16%);
+  --white: hsl(60, 12%, 95%);
+  --red: hsl(0, 50%, 51%);
+  --orange: hsl(38, 94%, 51%);
+  --blue-purple: hsl(246, 54%, 58%);
+  --purple: hsl(269, 97%, 85%);
+  
+  --black-vals: 240, 4%, 16%;
+  --white-vals: 60, 12%, 95%;
+  --red-vals: 0, 50%, 51%;
+  --orange-vals: 38, 94%, 51%;
+
+  --bez: cubic-bezier(0.33,-0.67,0.53,1.67);
+
+  --small-text: 0.975rem;
+}

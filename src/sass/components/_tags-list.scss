@@ -11,9 +11,9 @@
   }
   
   li {
-    padding-top: 4px;
+    padding-top: 5px;
     font-size: 0.95rem;
-    color: var(--clr-dark-primary);
+    color: var(--primary-clr);
 
     &:not(:last-of-type){
       margin-right: 1rem;

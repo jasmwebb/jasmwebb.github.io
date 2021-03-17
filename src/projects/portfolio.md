@@ -1,7 +1,7 @@
 ---
 name: This Portfolio
 thumb: portfoliothumb.png
-demo: 
+demo: https://jasminewebb.dev
 source: https://github.com/jasmwebb/jasminewebbdev
 tech: 
   - Eleventy

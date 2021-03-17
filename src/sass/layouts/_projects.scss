@@ -18,7 +18,7 @@
     clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
     shape-outside: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
     margin-right: 0.75rem;
-    border-left: 6px solid var(--clr-dark-primary);
+    border-left: 6px solid var(--primary-clr);
     border-radius: 4px;
 
     &::after {
@@ -28,8 +28,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(120deg, transparent, var(--clr-dark-bg) 85%),
-        linear-gradient(to right, rgba(248, 161, 13, 0.15), transparent 50%);
+      background: var(--gradient-lg);
     }
   }
 
@@ -41,14 +40,22 @@
     margin-left: auto;
     grid-area: links;
 
-    a {
+    p {
+      display: inline;
+      font-weight: 700;
+    }
+
+    a, p {
       border-radius: 2px;
-      border: 1px solid var(--clr-dark-accent);
+      border: 1px solid var(--accent-clr);
       padding: 0.25rem 0.75rem;
+    }
+    
+    a {
       text-decoration: none;
       
       &:hover {
-        border: 1px solid var(--clr-dark-primary);
+        border: 1px solid var(--primary-clr);
       }
     }
   }
@@ -58,7 +65,7 @@
   }
 
   .description {
-    font-size: 0.95rem;
+    font-size: var(--small-text);
 
     p:not(:last-of-type){
       margin-bottom: 1rem;
@@ -75,13 +82,13 @@ form {
 }
 
 select {
-  background-color: var(--clr-dark-bg);
-  color: var(--clr-dark-text);
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
   border-radius: 2px;
-  border: 1px solid var(--clr-dark-accent);
+  border: 1px solid var(--accent-clr);
   padding: 0.25rem;
 
   &::selection:hover {
-    background-color: var(--clr-dark-accent);
+    background-color: var(--accent-clr);
   }
 }

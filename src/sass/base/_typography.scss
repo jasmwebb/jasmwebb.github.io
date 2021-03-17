@@ -1,11 +1,11 @@
 body {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.15rem;
-  color: var(--clr-dark-text);
+  color: var(--text-clr);
 }
 
 a {
-  color: var(--clr-dark-accent);
+  color: var(--accent-clr);
   font-weight: 700;
 
   &.svg {
@@ -13,14 +13,14 @@ a {
   }
 
   &:hover {
-    color: var(--clr-dark-primary);
+    color: var(--primary-clr);
   }
 }
 
 strong,
 em,
 mark {
-  color: var(--clr-dark-primary);
+  color: var(--primary-clr);
 }
 
 mark {

@@ -13,7 +13,7 @@ eleventyNavigation:
   <aside class="speech-bubble">It's literally my name!</aside>
   
   <p>
-    When I first learned to code, my proudest accomplishments amounted to custom Myspace, Tumblr, and Quizilla layouts and themes. Several years later, I earned my Bachelor's in Psychology and taught English to kids in South Korea <strong>♡</strong>. Nowadays, I gravitate towards Python and JAMstack applications, but I'm always up for diversifying my portfolio!
+    When I first learned to code, my proudest accomplishments amounted to custom Myspace, Tumblr, and Quizilla layouts and themes. Several years later, I earned my Bachelor's in Psychology and taught English to kids in South Korea <strong>♡</strong>. Nowadays, I gravitate towards Python and JAMstack applications, but I'm always up for learning new things!
   </p>
 </section>
 
@@ -29,7 +29,9 @@ eleventyNavigation:
     <article class="feed-item">
       {% image src, alt, "100" %}
 
-      <h3>{{ project.data.name }}</h3>
+      <h3>
+        <a href="{{ project.data.demo }}">{{ project.data.name }}</a>
+      </h3>
       
       <ul role="list" class="tags-list">
         {%- for tech in project.data.tech %}

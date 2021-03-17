@@ -33,7 +33,11 @@ eleventyNavigation:
       <h3>{{ project.data.name }}</h3>
       
       <div class="links">
-        <a href="{{ project.data.demo }}" class="demo-link">demo</a>
+        {%- if project.data.demo %}
+          <a href="{{ project.data.demo }}" class="demo-link">demo</a>
+        {%- else %}
+          <p>no demo</p>
+        {%- endif %}
         <a href="{{ project.data.source }}" class="source-link">source</a>
       </div>
       
